@@ -54,5 +54,10 @@ namespace CSLabProject
         {
             
         }
+
+        private void cascadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
