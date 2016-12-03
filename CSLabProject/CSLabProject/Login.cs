@@ -24,6 +24,8 @@ namespace CSLabProject
         private void bntLogIn_Click(object sender, EventArgs e)
         {
             Main mainForm = new Main();
+            //Inventory inventory = new Inventory();
+            //inventory.ShowDialog();
 
             this.Hide();
             mainForm.ShowDialog();
