@@ -21,5 +21,17 @@ namespace CSLabProject
         {
             Dispose();
         }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            if(ItemName_txtbx.Text == string.Empty || quantity_txtbx.Text == string.Empty)
+            {
+                warnLabel.Text = "You cannot leave a field empty.";
+            }
+            else
+            {
+                warnLabel.Text = string.Empty;
+            }
+        }
     }
 }

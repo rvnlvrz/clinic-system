@@ -36,6 +36,7 @@
             this.btn_cancel = new System.Windows.Forms.Button();
             this.AddingAs_txtbx = new System.Windows.Forms.TextBox();
             this.add_lbl = new System.Windows.Forms.Label();
+            this.warnLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ItemName_txtbx
@@ -65,12 +66,13 @@
             this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_add.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_add.Location = new System.Drawing.Point(170, 155);
+            this.btn_add.Location = new System.Drawing.Point(170, 165);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(86, 37);
             this.btn_add.TabIndex = 2;
             this.btn_add.Text = "ADD";
             this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // itemName_lbl
             // 
@@ -99,7 +101,7 @@
             this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cancel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_cancel.Location = new System.Drawing.Point(356, 155);
+            this.btn_cancel.Location = new System.Drawing.Point(356, 165);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(86, 37);
             this.btn_cancel.TabIndex = 5;
@@ -130,12 +132,22 @@
             this.add_lbl.TabIndex = 7;
             this.add_lbl.Text = "Adding As:";
             // 
+            // warnLabel
+            // 
+            this.warnLabel.AutoSize = true;
+            this.warnLabel.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warnLabel.Location = new System.Drawing.Point(160, 137);
+            this.warnLabel.Name = "warnLabel";
+            this.warnLabel.Size = new System.Drawing.Size(0, 25);
+            this.warnLabel.TabIndex = 8;
+            // 
             // AddToInventoryDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(587, 204);
+            this.ClientSize = new System.Drawing.Size(587, 246);
+            this.Controls.Add(this.warnLabel);
             this.Controls.Add(this.add_lbl);
             this.Controls.Add(this.AddingAs_txtbx);
             this.Controls.Add(this.btn_cancel);
@@ -161,5 +173,6 @@
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.TextBox AddingAs_txtbx;
         private System.Windows.Forms.Label add_lbl;
+        private System.Windows.Forms.Label warnLabel;
     }
 }
