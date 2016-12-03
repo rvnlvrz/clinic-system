@@ -19,3 +19,14 @@ C:\Users\Arvin\Desktop\TODO\CSLabProject\CSLabProject\obj\Debug\CSLabProject.csp
 C:\Users\Arvin\Desktop\TODO\CSLabProject\CSLabProject\obj\Debug\CSLabProject.exe
 C:\Users\Arvin\Desktop\TODO\CSLabProject\CSLabProject\obj\Debug\CSLabProject.pdb
 C:\Users\Arvin\Desktop\TODO\CSLabProject\CSLabProject\obj\Debug\CSLabProject.Main.resources
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\bin\Debug\CSLabProject.exe.config
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.exe
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.pdb
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.csprojResolveAssemblyReference.cache
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.LoginForm.resources
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.Main.resources
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.Properties.Resources.resources
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.StudentDetails.resources
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.csproj.GenerateResource.Cache
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\bin\Debug\CSLabProject.exe
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\bin\Debug\CSLabProject.pdb
