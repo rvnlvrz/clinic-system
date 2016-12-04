@@ -127,6 +127,7 @@
             this.GRDN_textBoxMobileNum.Name = "GRDN_textBoxMobileNum";
             this.GRDN_textBoxMobileNum.Size = new System.Drawing.Size(232, 26);
             this.GRDN_textBoxMobileNum.TabIndex = 15;
+            this.GRDN_textBoxMobileNum.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GRDN_textBoxMobileNum_MouseClick);
             this.GRDN_textBoxMobileNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.GRDN_textBoxMobileNum_KeyPress);
             this.GRDN_textBoxMobileNum.Leave += new System.EventHandler(this.GRDN_textBoxMobileNum_Leave);
             // 
@@ -146,6 +147,7 @@
             this.GRDN_textBoxLandLine.Name = "GRDN_textBoxLandLine";
             this.GRDN_textBoxLandLine.Size = new System.Drawing.Size(156, 26);
             this.GRDN_textBoxLandLine.TabIndex = 16;
+            this.GRDN_textBoxLandLine.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GRDN_textBoxLandLine_MouseClick);
             this.GRDN_textBoxLandLine.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.GRDN_textBoxLandLine_KeyPress);
             this.GRDN_textBoxLandLine.Leave += new System.EventHandler(this.GRDN_textBoxLandLine_Leave);
             // 
@@ -165,6 +167,7 @@
             this.GRDN_textBoxFirstName.Name = "GRDN_textBoxFirstName";
             this.GRDN_textBoxFirstName.Size = new System.Drawing.Size(232, 26);
             this.GRDN_textBoxFirstName.TabIndex = 12;
+            this.GRDN_textBoxFirstName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GRDN_textBoxFirstName_MouseClick);
             this.GRDN_textBoxFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.GRDN_textBoxFirstName_KeyPress);
             this.GRDN_textBoxFirstName.Leave += new System.EventHandler(this.GRDN_textBoxFirstName_Leave);
             // 
@@ -184,6 +187,7 @@
             this.GRDN_textBoxLastName.Name = "GRDN_textBoxLastName";
             this.GRDN_textBoxLastName.Size = new System.Drawing.Size(237, 26);
             this.GRDN_textBoxLastName.TabIndex = 13;
+            this.GRDN_textBoxLastName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GRDN_textBoxLastName_MouseClick);
             this.GRDN_textBoxLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.GRDN_textBoxLastName_KeyPress);
             this.GRDN_textBoxLastName.Leave += new System.EventHandler(this.GRDN_textBoxLastName_Leave);
             // 
@@ -203,6 +207,7 @@
             this.GRDN_textBoxMI.Name = "GRDN_textBoxMI";
             this.GRDN_textBoxMI.Size = new System.Drawing.Size(48, 26);
             this.GRDN_textBoxMI.TabIndex = 14;
+            this.GRDN_textBoxMI.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GRDN_textBoxMI_MouseClick);
             this.GRDN_textBoxMI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.GRDN_textBoxMI_KeyPress);
             this.GRDN_textBoxMI.Leave += new System.EventHandler(this.GRDN_textBoxMI_Leave);
             // 
@@ -273,6 +278,7 @@
             this.STUD_textBoxMobileNum.Name = "STUD_textBoxMobileNum";
             this.STUD_textBoxMobileNum.Size = new System.Drawing.Size(232, 26);
             this.STUD_textBoxMobileNum.TabIndex = 10;
+            this.STUD_textBoxMobileNum.MouseClick += new System.Windows.Forms.MouseEventHandler(this.STUD_textBoxMobileNum_MouseClick);
             this.STUD_textBoxMobileNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.STUD_textBoxMobileNum_KeyPress);
             this.STUD_textBoxMobileNum.Leave += new System.EventHandler(this.STUD_textBoxMobileNum_Leave);
             // 
@@ -292,6 +298,7 @@
             this.STUD_textBoxLandLine.Name = "STUD_textBoxLandLine";
             this.STUD_textBoxLandLine.Size = new System.Drawing.Size(237, 26);
             this.STUD_textBoxLandLine.TabIndex = 11;
+            this.STUD_textBoxLandLine.MouseClick += new System.Windows.Forms.MouseEventHandler(this.STUD_textBoxLandLine_MouseClick);
             this.STUD_textBoxLandLine.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.STUD_textBoxLandLine_KeyPress);
             this.STUD_textBoxLandLine.Leave += new System.EventHandler(this.STUD_textBoxLandLine_Leave);
             // 
@@ -311,6 +318,7 @@
             this.STUD_textBoxYrLvl.Name = "STUD_textBoxYrLvl";
             this.STUD_textBoxYrLvl.Size = new System.Drawing.Size(62, 26);
             this.STUD_textBoxYrLvl.TabIndex = 7;
+            this.STUD_textBoxYrLvl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.STUD_textBoxYrLvl_MouseClick);
             this.STUD_textBoxYrLvl.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.STUD_textBoxYrLvl_KeyPress);
             this.STUD_textBoxYrLvl.Leave += new System.EventHandler(this.STUD_textBoxYrLvl_Leave);
             // 
@@ -330,6 +338,7 @@
             this.STUD_textBoxProram.Name = "STUD_textBoxProram";
             this.STUD_textBoxProram.Size = new System.Drawing.Size(53, 26);
             this.STUD_textBoxProram.TabIndex = 6;
+            this.STUD_textBoxProram.MouseClick += new System.Windows.Forms.MouseEventHandler(this.STUD_textBoxProram_MouseClick);
             this.STUD_textBoxProram.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.STUD_textBoxProram_KeyPress);
             this.STUD_textBoxProram.Leave += new System.EventHandler(this.STUD_textBoxProram_Leave);
             // 
@@ -364,6 +373,7 @@
             this.STUD_radioButtonFemale.TabStop = true;
             this.STUD_radioButtonFemale.Text = "Female";
             this.STUD_radioButtonFemale.UseVisualStyleBackColor = true;
+            this.STUD_radioButtonFemale.Click += new System.EventHandler(this.STUD_radioButtonFemale_Click);
             // 
             // STUD_radioButtonMale
             // 
@@ -376,6 +386,7 @@
             this.STUD_radioButtonMale.TabStop = true;
             this.STUD_radioButtonMale.Text = "Male";
             this.STUD_radioButtonMale.UseVisualStyleBackColor = true;
+            this.STUD_radioButtonMale.Click += new System.EventHandler(this.STUD_radioButtonMale_Click);
             // 
             // STUD_textBoxFirstName
             // 
@@ -384,6 +395,7 @@
             this.STUD_textBoxFirstName.Name = "STUD_textBoxFirstName";
             this.STUD_textBoxFirstName.Size = new System.Drawing.Size(232, 26);
             this.STUD_textBoxFirstName.TabIndex = 1;
+            this.STUD_textBoxFirstName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.STUD_textBoxFirstName_MouseClick);
             this.STUD_textBoxFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.STUD_textBoxFirstName_KeyPress);
             this.STUD_textBoxFirstName.Leave += new System.EventHandler(this.STUD_textBoxFirstName_Leave);
             // 
@@ -393,6 +405,7 @@
             this.STUD_textBoxStudentNumber.Name = "STUD_textBoxStudentNumber";
             this.STUD_textBoxStudentNumber.Size = new System.Drawing.Size(167, 26);
             this.STUD_textBoxStudentNumber.TabIndex = 5;
+            this.STUD_textBoxStudentNumber.MouseClick += new System.Windows.Forms.MouseEventHandler(this.STUD_textBoxStudentNumber_MouseClick);
             this.STUD_textBoxStudentNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.STUD_textBoxStudentNumber_KeyPress);
             this.STUD_textBoxStudentNumber.Leave += new System.EventHandler(this.STUD_textBoxStudentNumber_Leave);
             // 
@@ -412,6 +425,7 @@
             this.STUD_textBoxAge.Name = "STUD_textBoxAge";
             this.STUD_textBoxAge.Size = new System.Drawing.Size(53, 26);
             this.STUD_textBoxAge.TabIndex = 4;
+            this.STUD_textBoxAge.MouseClick += new System.Windows.Forms.MouseEventHandler(this.STUD_textBoxAge_MouseClick);
             this.STUD_textBoxAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.STUD_textBoxAge_KeyPress);
             this.STUD_textBoxAge.Leave += new System.EventHandler(this.STUD_textBoxAge_Leave);
             // 
@@ -441,6 +455,7 @@
             this.STUD_textBoxLastName.Name = "STUD_textBoxLastName";
             this.STUD_textBoxLastName.Size = new System.Drawing.Size(237, 26);
             this.STUD_textBoxLastName.TabIndex = 2;
+            this.STUD_textBoxLastName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.STUD_textBoxLastName_MouseClick);
             this.STUD_textBoxLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.STUD_textBoxFLastName_KeyPress);
             this.STUD_textBoxLastName.Leave += new System.EventHandler(this.STUD_textBoxLastName_Leave);
             // 
@@ -460,6 +475,7 @@
             this.STUD_textBoxMI.Name = "STUD_textBoxMI";
             this.STUD_textBoxMI.Size = new System.Drawing.Size(48, 26);
             this.STUD_textBoxMI.TabIndex = 3;
+            this.STUD_textBoxMI.MouseClick += new System.Windows.Forms.MouseEventHandler(this.STUD_textBoxMI_MouseClick);
             this.STUD_textBoxMI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.STUD_textBoxMI_KeyPress);
             this.STUD_textBoxMI.Leave += new System.EventHandler(this.STUD_textBoxMI_Leave);
             // 
@@ -478,11 +494,10 @@
             this.warning_label.AutoSize = true;
             this.warning_label.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warning_label.ForeColor = System.Drawing.Color.DarkRed;
-            this.warning_label.Location = new System.Drawing.Point(173, 529);
+            this.warning_label.Location = new System.Drawing.Point(192, 527);
             this.warning_label.Name = "warning_label";
-            this.warning_label.Size = new System.Drawing.Size(14, 21);
+            this.warning_label.Size = new System.Drawing.Size(0, 21);
             this.warning_label.TabIndex = 20;
-            this.warning_label.Text = ".";
             // 
             // StudentDetails
             // 
