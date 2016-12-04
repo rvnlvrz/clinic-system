@@ -756,9 +756,9 @@ namespace CSLabProject
            
             if (confirmNoneAreNull && confirmAllAreValid)
             {
-                STUD_textBoxMI.Text += ".";
-                GRDN_textBoxMI.Text += ".";
-                globals.currentDirectory += @"\" + STUD_textBoxLastName.Text + @"\";
+                STUD_textBoxMI.Text = STUD_textBoxMI.Text.ToUpper() +  ".";
+                GRDN_textBoxMI.Text = GRDN_textBoxMI.Text.ToUpper() + ".";
+                globals.currentDirectory += @"\" + STUD_textBoxStudentNumber.Text + @"\";
                 Directory.CreateDirectory(globals.currentDirectory);
                 File.WriteAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxFirstName.Text + Environment.NewLine);
                 File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxLastName.Text + Environment.NewLine);
@@ -769,6 +769,13 @@ namespace CSLabProject
                 File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxYrLvl.Text + Environment.NewLine);
                 File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxMobileNum.Text + Environment.NewLine);
                 File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxLandLine.Text + Environment.NewLine);
+
+                File.WriteAllText(globals.currentDirectory + "GuardianData.txt", comboBoxRelationship.SelectedItem + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory +"GuardianData.txt", GRDN_textBoxFirstName.Text + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", GRDN_textBoxLastName.Text + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", GRDN_textBoxMobileNum.Text + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", GRDN_textBoxMobileNum.Text + Environment.NewLine);
+
                 MessageBox.Show("The details for " + STUD_textBoxLastName.Text + " has been added to the system.");
                 Dispose();
             }
