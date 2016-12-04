@@ -38,6 +38,7 @@
             this.menuWTileV = new System.Windows.Forms.ToolStripMenuItem();
             this.menuWArrange = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.studentDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -80,7 +81,8 @@
             this.menuWTileH,
             this.menuWTileV,
             this.menuWArrange,
-            this.toolStripSeparator1});
+            this.toolStripSeparator1,
+            this.studentDetailsToolStripMenuItem});
             this.menuWindow.Name = "menuWindow";
             this.menuWindow.Size = new System.Drawing.Size(63, 20);
             this.menuWindow.Text = "&Window";
@@ -89,35 +91,42 @@
             // menuWCascade
             // 
             this.menuWCascade.Name = "menuWCascade";
-            this.menuWCascade.Size = new System.Drawing.Size(152, 22);
+            this.menuWCascade.Size = new System.Drawing.Size(153, 22);
             this.menuWCascade.Text = "Cascade";
             this.menuWCascade.Click += new System.EventHandler(this.cascadeToolStripMenuItem_Click);
             // 
             // menuWTileH
             // 
             this.menuWTileH.Name = "menuWTileH";
-            this.menuWTileH.Size = new System.Drawing.Size(152, 22);
+            this.menuWTileH.Size = new System.Drawing.Size(153, 22);
             this.menuWTileH.Text = "Tile &Horizontal";
             this.menuWTileH.Click += new System.EventHandler(this.menuWTileH_Click);
             // 
             // menuWTileV
             // 
             this.menuWTileV.Name = "menuWTileV";
-            this.menuWTileV.Size = new System.Drawing.Size(152, 22);
+            this.menuWTileV.Size = new System.Drawing.Size(153, 22);
             this.menuWTileV.Text = "Tile &Vertical";
             this.menuWTileV.Click += new System.EventHandler(this.menuWTileV_Click);
             // 
             // menuWArrange
             // 
             this.menuWArrange.Name = "menuWArrange";
-            this.menuWArrange.Size = new System.Drawing.Size(152, 22);
+            this.menuWArrange.Size = new System.Drawing.Size(153, 22);
             this.menuWArrange.Text = "&Arrange Icons";
             this.menuWArrange.Click += new System.EventHandler(this.menuWArrange_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(150, 6);
+            // 
+            // studentDetailsToolStripMenuItem
+            // 
+            this.studentDetailsToolStripMenuItem.Name = "studentDetailsToolStripMenuItem";
+            this.studentDetailsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.studentDetailsToolStripMenuItem.Text = "Student &Details";
+            this.studentDetailsToolStripMenuItem.Click += new System.EventHandler(this.studentDetailsToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -153,5 +162,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuWTileV;
         private System.Windows.Forms.ToolStripMenuItem menuWArrange;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem studentDetailsToolStripMenuItem;
     }
 }
