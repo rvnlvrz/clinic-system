@@ -1,23 +1,15 @@
-<<<<<<< HEAD
-﻿
-=======
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
 
 namespace CSLabProject
 {
-    public partial class StudentDetails : Form
+    public partial class frmStudentDetails : Form
     {
-        public StudentDetails()
+        public frmStudentDetails()
         {
             InitializeComponent();
         }
@@ -38,6 +30,8 @@ namespace CSLabProject
             //{
             //    tb.Validating += textBox_Validating;
             //}
+            GlobalVar.frmCtrSD++;
+            this.Text += " " + GlobalVar.frmCtrSD.ToString();
         }
 
         public class globals
@@ -861,4 +855,4 @@ namespace CSLabProject
         }
     }
 }
->>>>>>> refs/remotes/origin/master
+

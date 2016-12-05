@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace CSLabProject
 {
@@ -12,8 +13,7 @@ namespace CSLabProject
 
         private void Main_Load(object sender, EventArgs e)
         {
-            //StudentDetails m = new StudentDetails();
-            //m.ShowDialog();
+            SHA256 myCrypt = SHA256Managed.Create();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -23,13 +23,13 @@ namespace CSLabProject
 
         private void bntLogIn_Click(object sender, EventArgs e)
         {
-            Main mainForm = new Main();
-            //Inventory inventory = new Inventory();
-            //inventory.ShowDialog();
+            frmMain mainForm = new frmMain();
             GlobalVar.frmCtrSD = 0;
             this.Hide();
             mainForm.ShowDialog();
             this.Show();
+
+
         }
     }
 }

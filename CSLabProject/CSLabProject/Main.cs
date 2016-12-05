@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CSLabProject
 {
-    public partial class Main : Form
+    public partial class frmMain : Form
     {
-        public Main()
+        public frmMain()
         {
             InitializeComponent();
         }
@@ -42,11 +42,15 @@ namespace CSLabProject
             }
 
             // display intial forms
-            StudentDetails m = new StudentDetails();
+            frmStudentDetails m = new frmStudentDetails();
             m.MdiParent = this;
-            GlobalVar.frmCtrSD++;
-            m.Text += " " + GlobalVar.frmCtrSD.ToString();
             m.Show();
+
+            frmReportForm myReport = new frmReportForm();
+            myReport.MdiParent = this;
+            myReport.Show();
+
+            
         }
 
         private void windowsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -86,14 +90,18 @@ namespace CSLabProject
 
         private void studentDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StudentDetails studForm = new StudentDetails();
+            frmStudentDetails studForm = new frmStudentDetails();
             studForm.MdiParent = this;
-            GlobalVar.frmCtrSD++;
-            studForm.Text += " " + GlobalVar.frmCtrSD.ToString();
+
             studForm.Show();
         }
 
         private void inventoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
