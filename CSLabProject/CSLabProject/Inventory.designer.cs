@@ -32,6 +32,7 @@
             this.inventoryGrid = new System.Windows.Forms.ListView();
             this.NameHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.QuantityHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.unitHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DateHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.UserAssignmentHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.UserTypeHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -51,7 +52,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_Confirm = new System.Windows.Forms.Button();
             this.BTNclose = new System.Windows.Forms.Button();
-            this.unitHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grpbxInventoryTools.SuspendLayout();
             this.grpbxUserDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userAvatar)).BeginInit();
@@ -88,6 +88,11 @@
             this.QuantityHeader.Text = "Item Quantity";
             this.QuantityHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.QuantityHeader.Width = 143;
+            // 
+            // unitHeader
+            // 
+            this.unitHeader.Text = "Type";
+            this.unitHeader.Width = 140;
             // 
             // DateHeader
             // 
@@ -149,6 +154,7 @@
             this.BTNdsearchItem.TabIndex = 5;
             this.SearchTT.SetToolTip(this.BTNdsearchItem, "Search the inventory for an existing record.");
             this.BTNdsearchItem.UseVisualStyleBackColor = true;
+            this.BTNdsearchItem.Click += new System.EventHandler(this.BTNdsearchItem_Click);
             // 
             // BTNcreateNew
             // 
@@ -235,11 +241,6 @@
             this.BTNclose.TabIndex = 7;
             this.BTNclose.UseVisualStyleBackColor = false;
             this.BTNclose.Click += new System.EventHandler(this.BTNclose_Click);
-            // 
-            // unitHeader
-            // 
-            this.unitHeader.Text = "Type";
-            this.unitHeader.Width = 140;
             // 
             // Inventory
             // 

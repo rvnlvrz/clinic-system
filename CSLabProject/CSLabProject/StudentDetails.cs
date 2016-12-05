@@ -20,21 +20,14 @@ namespace CSLabProject
         }
 
         private void StudentDetails_Load(object sender, EventArgs e)
-        {   
-            //Do not allow the user to leave a textbox empty.
+        {
+            MinimizeBox = false;
+            MaximizeBox = false;
             comboBoxRelationship.SelectedIndex = 1;
             string direc = AppDomain.CurrentDomain.BaseDirectory;
             string directory = direc.Replace(@"\bin\Debug\", "");
             globals.currentDirectory = directory + @"\Raw Program Data\";
             STUD_radioButtonMale.Select();
-            //foreach (TextBox tb in student_grpbx.Controls.OfType<TextBox>().Where(x => x.CausesValidation == true))
-            //{
-            //    tb.Validating += textBox_Validating;
-            //}
-            //foreach (TextBox tb in guradian_grpbx.Controls.OfType<TextBox>().Where(x => x.CausesValidation == true))
-            //{
-            //    tb.Validating += textBox_Validating;
-            //}
         }
 
         public class globals
@@ -57,21 +50,6 @@ namespace CSLabProject
             public static bool formElement13 = false;
             public static bool formElement14 = false;
         }
-
-        private void textBox_Validating(object sender, CancelEventArgs e)
-        {
-            TextBox currenttb = (TextBox)sender;
-            if (currenttb.Text == "")
-            {
-                e.Cancel = true;
-            }
-            else
-            {
-                e.Cancel = false;
-                warning_label.Text = string.Empty;
-            }
-        }
-
         private void STUD_textBoxFirstName_KeyPress(object sender, KeyPressEventArgs e)
         {
             //The user cannot input the characters sepecified below.
@@ -855,6 +833,11 @@ namespace CSLabProject
         private void STUD_radioButtonFemale_Click(object sender, EventArgs e)
         {
             LabelStudentGender.ForeColor = Color.Black;
+        }
+
+        private void buttonCNCL_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }

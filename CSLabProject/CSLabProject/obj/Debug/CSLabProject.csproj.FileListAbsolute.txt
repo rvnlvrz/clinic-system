@@ -45,3 +45,5 @@ C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\bin\De
 C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.AddToInventoryDialog.resources
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.AddToInventoryDialog.resources
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.Inventory.resources
+C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.SearchInventoryDialog.resources
+C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.searchResultsForm.resources

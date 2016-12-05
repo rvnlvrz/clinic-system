@@ -67,7 +67,7 @@ namespace CSLabProject
 
         private void ItemName_txtbx_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|+$]"))
+            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>0-9|+$]"))
             {
                 e.Handled = true;
             }

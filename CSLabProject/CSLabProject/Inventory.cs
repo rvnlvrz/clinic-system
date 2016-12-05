@@ -19,12 +19,14 @@ namespace CSLabProject
 
         public static class globals
         {
-            public static string itemName = "";
-            public static string itemQuantity = "";
-            public static string addedAs = "";
-            public static string currentDate = "";
-            public static string position = "";
-            public static string medType = "";
+            public static string itemName = string.Empty;
+            public static string itemQuantity = string.Empty;
+            public static string addedAs = string.Empty;
+            public static string currentDate = string.Empty;
+            public static string position = string.Empty;
+            public static string medType = string.Empty;
+            public static string searchItem = "";
+            public static bool itemIsPresent = false;
         }
         private void Inventory_Load(object sender, EventArgs e)
         {
@@ -42,6 +44,19 @@ namespace CSLabProject
         private void BTNclose_Click(object sender, EventArgs e)
         {
             Dispose();
+        }
+
+        private void BTNdsearchItem_Click(object sender, EventArgs e)
+        {
+            //W.I.P.
+            SearchInventoryDialog searchInvDialogForm = new SearchInventoryDialog();
+            searchInvDialogForm.ShowDialog();
+            ListViewItem test = inventoryGrid.FindItemWithText(globals.searchItem);
+            searchResultsForm searchResultsFrm = new searchResultsForm();
+            if(test != null)
+            {
+                searchResultsFrm.ShowDialog();
+            }
         }
     }
 }
