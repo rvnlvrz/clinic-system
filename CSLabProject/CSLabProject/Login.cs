@@ -26,7 +26,7 @@ namespace CSLabProject
             Main mainForm = new Main();
             //Inventory inventory = new Inventory();
             //inventory.ShowDialog();
-
+            GlobalVar.frmCtrSD = 0;
             this.Hide();
             mainForm.ShowDialog();
             this.Show();

@@ -39,6 +39,7 @@
             this.menuWArrange = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.studentDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,7 +83,8 @@
             this.menuWTileV,
             this.menuWArrange,
             this.toolStripSeparator1,
-            this.studentDetailsToolStripMenuItem});
+            this.studentDetailsToolStripMenuItem,
+            this.inventoryToolStripMenuItem});
             this.menuWindow.Name = "menuWindow";
             this.menuWindow.Size = new System.Drawing.Size(63, 20);
             this.menuWindow.Text = "&Window";
@@ -128,6 +130,13 @@
             this.studentDetailsToolStripMenuItem.Text = "Student &Details";
             this.studentDetailsToolStripMenuItem.Click += new System.EventHandler(this.studentDetailsToolStripMenuItem_Click);
             // 
+            // inventoryToolStripMenuItem
+            // 
+            this.inventoryToolStripMenuItem.Name = "inventoryToolStripMenuItem";
+            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.inventoryToolStripMenuItem.Text = "Inv&entory";
+            this.inventoryToolStripMenuItem.Click += new System.EventHandler(this.inventoryToolStripMenuItem_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,5 +172,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuWArrange;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem studentDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
     }
 }

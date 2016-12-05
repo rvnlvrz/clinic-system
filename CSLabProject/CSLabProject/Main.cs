@@ -81,7 +81,7 @@ namespace CSLabProject
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
+            Dispose();
         }
 
         private void studentDetailsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,6 +91,11 @@ namespace CSLabProject
             GlobalVar.frmCtrSD++;
             studForm.Text += " " + GlobalVar.frmCtrSD.ToString();
             studForm.Show();
+        }
+
+        private void inventoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
