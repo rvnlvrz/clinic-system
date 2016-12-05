@@ -36,14 +36,9 @@
             this.UserAssignmentHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.UserTypeHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grpbxInventoryTools = new System.Windows.Forms.GroupBox();
-            this.BTNdeleteItem = new System.Windows.Forms.Button();
-            this.BTNModifyItem = new System.Windows.Forms.Button();
-            this.BTNdsearchItem = new System.Windows.Forms.Button();
-            this.BTNcreateNew = new System.Windows.Forms.Button();
             this.UserName = new System.Windows.Forms.Label();
             this.userPosition = new System.Windows.Forms.Label();
             this.grpbxUserDetails = new System.Windows.Forms.GroupBox();
-            this.userAvatar = new System.Windows.Forms.PictureBox();
             this.CreateTT = new System.Windows.Forms.ToolTip(this.components);
             this.RemoveTT = new System.Windows.Forms.ToolTip(this.components);
             this.EditTT = new System.Windows.Forms.ToolTip(this.components);
@@ -51,11 +46,15 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_Confirm = new System.Windows.Forms.Button();
             this.BTNclose = new System.Windows.Forms.Button();
-            this.unitHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.userAvatar = new System.Windows.Forms.PictureBox();
+            this.BTNdeleteItem = new System.Windows.Forms.Button();
+            this.BTNModifyItem = new System.Windows.Forms.Button();
+            this.BTNdsearchItem = new System.Windows.Forms.Button();
+            this.BTNcreateNew = new System.Windows.Forms.Button();
             this.grpbxInventoryTools.SuspendLayout();
             this.grpbxUserDetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userAvatar)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // inventoryGrid
@@ -64,7 +63,6 @@
             this.inventoryGrid.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.NameHeader,
             this.QuantityHeader,
-            this.unitHeader,
             this.DateHeader,
             this.UserAssignmentHeader,
             this.UserTypeHeader});
@@ -81,7 +79,7 @@
             // NameHeader
             // 
             this.NameHeader.Text = "Item Name";
-            this.NameHeader.Width = 314;
+            this.NameHeader.Width = 456;
             // 
             // QuantityHeader
             // 
@@ -119,6 +117,81 @@
             this.grpbxInventoryTools.TabIndex = 5;
             this.grpbxInventoryTools.TabStop = false;
             this.grpbxInventoryTools.Text = "Inventory Tools";
+            // 
+            // UserName
+            // 
+            this.UserName.AutoSize = true;
+            this.UserName.Location = new System.Drawing.Point(10, 26);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(206, 21);
+            this.UserName.TabIndex = 8;
+            this.UserName.Text = "This is where the name goes";
+            // 
+            // userPosition
+            // 
+            this.userPosition.AutoSize = true;
+            this.userPosition.Location = new System.Drawing.Point(12, 49);
+            this.userPosition.Name = "userPosition";
+            this.userPosition.Size = new System.Drawing.Size(105, 21);
+            this.userPosition.TabIndex = 9;
+            this.userPosition.Text = "Nurse/Doctor";
+            // 
+            // grpbxUserDetails
+            // 
+            this.grpbxUserDetails.Controls.Add(this.userPosition);
+            this.grpbxUserDetails.Controls.Add(this.UserName);
+            this.grpbxUserDetails.Controls.Add(this.userAvatar);
+            this.grpbxUserDetails.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpbxUserDetails.Location = new System.Drawing.Point(968, 12);
+            this.grpbxUserDetails.Name = "grpbxUserDetails";
+            this.grpbxUserDetails.Size = new System.Drawing.Size(291, 74);
+            this.grpbxUserDetails.TabIndex = 6;
+            this.grpbxUserDetails.TabStop = false;
+            this.grpbxUserDetails.Text = "Logged in as";
+            // 
+            // SearchTT
+            // 
+            this.SearchTT.IsBalloon = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btn_Confirm);
+            this.groupBox1.Controls.Add(this.BTNclose);
+            this.groupBox1.Location = new System.Drawing.Point(238, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(142, 74);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Window Options";
+            // 
+            // btn_Confirm
+            // 
+            this.btn_Confirm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Confirm.Image = global::CSLabProject.Properties.Resources.ic_check_black_18dp_1x;
+            this.btn_Confirm.Location = new System.Drawing.Point(71, 23);
+            this.btn_Confirm.Name = "btn_Confirm";
+            this.btn_Confirm.Size = new System.Drawing.Size(43, 38);
+            this.btn_Confirm.TabIndex = 8;
+            this.btn_Confirm.UseVisualStyleBackColor = false;
+            // 
+            // BTNclose
+            // 
+            this.BTNclose.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BTNclose.Image = global::CSLabProject.Properties.Resources.ic_close_black_18dp_1x;
+            this.BTNclose.Location = new System.Drawing.Point(22, 23);
+            this.BTNclose.Name = "BTNclose";
+            this.BTNclose.Size = new System.Drawing.Size(43, 38);
+            this.BTNclose.TabIndex = 7;
+            this.BTNclose.UseVisualStyleBackColor = false;
+            this.BTNclose.Click += new System.EventHandler(this.BTNclose_Click);
+            // 
+            // userAvatar
+            // 
+            this.userAvatar.Location = new System.Drawing.Point(231, 15);
+            this.userAvatar.Name = "userAvatar";
+            this.userAvatar.Size = new System.Drawing.Size(52, 54);
+            this.userAvatar.TabIndex = 7;
+            this.userAvatar.TabStop = false;
             // 
             // BTNdeleteItem
             // 
@@ -161,86 +234,6 @@
             this.BTNcreateNew.UseVisualStyleBackColor = true;
             this.BTNcreateNew.Click += new System.EventHandler(this.BTNcreateNew_Click);
             // 
-            // UserName
-            // 
-            this.UserName.AutoSize = true;
-            this.UserName.Location = new System.Drawing.Point(10, 26);
-            this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(206, 21);
-            this.UserName.TabIndex = 8;
-            this.UserName.Text = "This is where the name goes";
-            // 
-            // userPosition
-            // 
-            this.userPosition.AutoSize = true;
-            this.userPosition.Location = new System.Drawing.Point(12, 49);
-            this.userPosition.Name = "userPosition";
-            this.userPosition.Size = new System.Drawing.Size(105, 21);
-            this.userPosition.TabIndex = 9;
-            this.userPosition.Text = "Nurse/Doctor";
-            // 
-            // grpbxUserDetails
-            // 
-            this.grpbxUserDetails.Controls.Add(this.userPosition);
-            this.grpbxUserDetails.Controls.Add(this.UserName);
-            this.grpbxUserDetails.Controls.Add(this.userAvatar);
-            this.grpbxUserDetails.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpbxUserDetails.Location = new System.Drawing.Point(968, 12);
-            this.grpbxUserDetails.Name = "grpbxUserDetails";
-            this.grpbxUserDetails.Size = new System.Drawing.Size(291, 74);
-            this.grpbxUserDetails.TabIndex = 6;
-            this.grpbxUserDetails.TabStop = false;
-            this.grpbxUserDetails.Text = "Logged in as";
-            // 
-            // userAvatar
-            // 
-            this.userAvatar.Location = new System.Drawing.Point(231, 15);
-            this.userAvatar.Name = "userAvatar";
-            this.userAvatar.Size = new System.Drawing.Size(52, 54);
-            this.userAvatar.TabIndex = 7;
-            this.userAvatar.TabStop = false;
-            // 
-            // SearchTT
-            // 
-            this.SearchTT.IsBalloon = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btn_Confirm);
-            this.groupBox1.Controls.Add(this.BTNclose);
-            this.groupBox1.Location = new System.Drawing.Point(238, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(142, 74);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Window Options";
-            // 
-            // btn_Confirm
-            // 
-            this.btn_Confirm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Confirm.Image = global::CSLabProject.Properties.Resources.ic_check_black_18dp_1x;
-            this.btn_Confirm.Location = new System.Drawing.Point(71, 23);
-            this.btn_Confirm.Name = "btn_Confirm";
-            this.btn_Confirm.Size = new System.Drawing.Size(43, 38);
-            this.btn_Confirm.TabIndex = 8;
-            this.btn_Confirm.UseVisualStyleBackColor = false;
-            // 
-            // BTNclose
-            // 
-            this.BTNclose.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BTNclose.Image = global::CSLabProject.Properties.Resources.ic_close_black_18dp_1x;
-            this.BTNclose.Location = new System.Drawing.Point(22, 23);
-            this.BTNclose.Name = "BTNclose";
-            this.BTNclose.Size = new System.Drawing.Size(43, 38);
-            this.BTNclose.TabIndex = 7;
-            this.BTNclose.UseVisualStyleBackColor = false;
-            this.BTNclose.Click += new System.EventHandler(this.BTNclose_Click);
-            // 
-            // unitHeader
-            // 
-            this.unitHeader.Text = "Type";
-            this.unitHeader.Width = 140;
-            // 
             // Inventory
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -259,8 +252,8 @@
             this.grpbxInventoryTools.ResumeLayout(false);
             this.grpbxUserDetails.ResumeLayout(false);
             this.grpbxUserDetails.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userAvatar)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -288,6 +281,5 @@
         private System.Windows.Forms.Button BTNclose;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_Confirm;
-        private System.Windows.Forms.ColumnHeader unitHeader;
     }
 }
