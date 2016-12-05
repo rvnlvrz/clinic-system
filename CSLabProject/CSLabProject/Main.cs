@@ -32,15 +32,7 @@ namespace CSLabProject
 
                     // Set the Properties of the MdiClient control.
                     ctlMDI.BackColor = this.BackColor;
-                    menuStrip.BackColor = Color.FromArgb(245, 245, 245);
-
-                    int ctr = 0;
-                    foreach (ToolStripMenuItem itm in menuStrip.Items)
-                    {
-                        itm.BackColor = Color.FromArgb(245, 245, 245);
-                        
-                        ctr++;
-                    }
+                    //menuStrip.BackColor = Color.FromArgb(245, 245, 245);
 
                 }
                 catch (InvalidCastException exc)
@@ -49,9 +41,11 @@ namespace CSLabProject
                 }
             }
 
-            // Display a child form to show this is still an MDI application.
+            // display intial forms
             StudentDetails m = new StudentDetails();
             m.MdiParent = this;
+            GlobalVar.frmCtrSD++;
+            m.Text += " " + GlobalVar.frmCtrSD.ToString();
             m.Show();
         }
 
@@ -87,7 +81,26 @@ namespace CSLabProject
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
+            Dispose();
         }
+
+        private void studentDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StudentDetails studForm = new StudentDetails();
+            studForm.MdiParent = this;
+            GlobalVar.frmCtrSD++;
+            studForm.Text += " " + GlobalVar.frmCtrSD.ToString();
+            studForm.Show();
+        }
+
+        private void inventoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+
+    public static class GlobalVar
+    {
+        public static int frmCtrSD = 0;
     }
 }
