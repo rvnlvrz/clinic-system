@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-﻿
-=======
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -861,4 +858,3 @@ namespace CSLabProject
         }
     }
 }
->>>>>>> refs/remotes/origin/master
