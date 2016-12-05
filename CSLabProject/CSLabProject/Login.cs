@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using System.IO;
 
 namespace CSLabProject
 {
@@ -23,13 +24,15 @@ namespace CSLabProject
 
         private void bntLogIn_Click(object sender, EventArgs e)
         {
-            frmMain mainForm = new frmMain();
-            GlobalVar.frmCtrSD = 0;
-            this.Hide();
-            mainForm.ShowDialog();
-            this.Show();
+            //frmMain mainForm = new frmMain();
+            //GlobalVar.frmCtrSD = 0;
+            //this.Hide();
+            //mainForm.ShowDialog();
+            //this.Show();
 
-
+            //// test the encrypting process
+            //string myHashCode = Encrypt.EncryptString(tbxUser.Text, tbxPass.Text);
+            //File.WriteAllText("test.txt", myHashCode);
         }
     }
 }
