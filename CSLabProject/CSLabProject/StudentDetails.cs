@@ -22,7 +22,6 @@ namespace CSLabProject
         private void StudentDetails_Load(object sender, EventArgs e)
         {   
             //Do not allow the user to leave a textbox empty.
-            ControlBox = false;
             comboBoxRelationship.SelectedIndex = 1;
             string direc = AppDomain.CurrentDomain.BaseDirectory;
             string directory = direc.Replace(@"\bin\Debug\", "");
@@ -205,20 +204,13 @@ namespace CSLabProject
             {
                 e.Handled = true;
             }
-
-            else if (STUD_textBoxStudentNumber.Text.Length == 10 && e.KeyChar != 8)
-            {
-                e.Handled = true;
-            }
-
-            //if (STUD_textBoxStudentNumber.Text.Length == 10 && e.KeyChar == 8)
-            //{
-            //    STUD_textBoxStudentNumber.Text = STUD_textBoxStudentNumber.Text.Substring(0,STUD_textBoxStudentNumber.Text.Length-1);
-            //}
-
             else if (e.KeyChar == 8)
             {
                 e.Handled = false;
+            }
+            else if (STUD_textBoxStudentNumber.Text.Length == 10)
+            {
+                e.Handled = true;
             }
             if (STUD_textBoxStudentNumber.Text != string.Empty)
             {
