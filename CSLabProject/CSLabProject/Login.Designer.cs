@@ -88,7 +88,6 @@
             this.lblUser.Size = new System.Drawing.Size(58, 13);
             this.lblUser.TabIndex = 4;
             this.lblUser.Text = "Username:";
-            this.lblUser.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblPasscode
             // 
@@ -145,6 +144,7 @@
             // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnLogIn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
