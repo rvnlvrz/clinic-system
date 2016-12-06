@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Security.Cryptography;
 using System.IO;
-using System.Text;
 
 namespace CSLabProject
 {
@@ -15,12 +13,7 @@ namespace CSLabProject
 
         private void Main_Load(object sender, EventArgs e)
         {
-            SHA256 myCrypt = SHA256Managed.Create();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            
         }
 
         private void bntLogIn_Click(object sender, EventArgs e)
@@ -29,10 +22,18 @@ namespace CSLabProject
             //string myHashCode = Encrypt.EncryptString(tbxUser.Text, tbxPass.Text);
             //File.WriteAllText("test.txt", myHashCode);
 
+            string[] defCode = new string[] {"UJifg1yjRhG9l4RoYkZm+w=="};
+
+            if (!File.Exists(@"accts.txt"))
+            {
+                File.WriteAllLines(@"accts.txt", defCode);
+            }
+
             // check login
             string userCipher = Encrypt.EncryptString(tbxUser.Text, tbxPass.Text);
-            string[] definedCipher = File.ReadAllLines(@"test.txt");
-
+            string[] definedCipher = File.ReadAllLines(@"accts.txt");
+            Form activeForm = Form.ActiveForm;
+            
             for (int x = 0; x < definedCipher.Length; x++)
             {
                 if (string.Compare(userCipher, definedCipher[x]) == 0)
@@ -44,6 +45,12 @@ namespace CSLabProject
                     this.Hide();
                     mainForm.ShowDialog();
                     this.Show();
+
+                    foreach (Control ctrl in activeForm.Controls)
+                    {
+                        if (ctrl is TextBox)
+                            ctrl.ResetText();
+                    }
                     return;
                 }
             }
@@ -51,13 +58,13 @@ namespace CSLabProject
             // this code will only be reached if the credentials are invalid
             MessageBox.Show("The credentials you have typed doesn't exist in the accounts list.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            Form activeForm = Form.ActiveForm;
-
-            foreach(Control ctrl in activeForm.Controls)
+            foreach (Control ctrl in activeForm.Controls)
             {
                 if (ctrl is TextBox)
                     ctrl.ResetText();
             }
         }
+
+
     }
 }

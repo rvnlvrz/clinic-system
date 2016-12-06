@@ -5,14 +5,22 @@ using System.IO;
 
 namespace CSLabProject
 {
+    /// <summary>
+    /// This class manages en/decryption using Rijndael crypto
+    /// </summary>
     public static class Encrypt
     {
         // the IV size in bytes must be (keysize/2)
         // in conversion, a 16 character string will give us 32 bytse
         private const string stringIV = "!aKsMt*-*%q1bc=a";
-
         private const int keySize = 256;
 
+        /// <summary>
+        /// Processes input strings and obfuscates them so that they can be safely stored in plain text
+        /// </summary>
+        /// <param name="userName">User provided username</param>
+        /// <param name="passCode">User provided passphrase</param>
+        /// <returns>Returns an encrypted base 64 string</returns>
         //Encrypt
         public static string EncryptString(string userName, string passCode)
         {
@@ -35,7 +43,7 @@ namespace CSLabProject
             memStream.Close();
             cryptStream.Close();
 
-            return Convert.ToBase64String(ciperByte);        
+            return Convert.ToBase64String(ciperByte);
         }
     }
 }
