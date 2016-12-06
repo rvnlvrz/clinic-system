@@ -42,9 +42,9 @@ namespace CSLabProject
             }
 
             // display intial forms
-            frmStudentDetails m = new frmStudentDetails();
-            m.MdiParent = this;
-            m.Show();
+            //frmStudentDetails m = new frmStudentDetails();
+            //m.MdiParent = this;
+            //m.Show();
 
             frmReportForm myReport = new frmReportForm();
             myReport.MdiParent = this;
