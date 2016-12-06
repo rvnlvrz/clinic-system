@@ -12,16 +12,18 @@ something relevant like diag-form for the changes regarding the _diagnosis_ form
 - - -
 Also do the same thing for the Visual C# Elements:
 
-Labels 	  __lbl__ 
-TextBoxes	__tbx__ 
-Forms		   __frm__
-Buttons  	__btn__
- 
-and so on...
+Labels->__lbl__ 
 
-doing so will help all of us code faster and with much ease using IntelliSense.
+TextBoxes->__tbx__ 
+
+Forms->__frm__
+
+Buttons->__btn__
+ 
+and so on, doing so will help all of us code faster and with much ease using IntelliSense.
 
 NOTE: a user and password is required for the login form, use:
 
 *admin*
+
 1234
