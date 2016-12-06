@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CSLabProject
 {
-    public partial class Main : Form
+    public partial class frmMain : Form
     {
-        public Main()
+        public frmMain()
         {
             InitializeComponent();
         }
@@ -32,15 +32,7 @@ namespace CSLabProject
 
                     // Set the Properties of the MdiClient control.
                     ctlMDI.BackColor = this.BackColor;
-                    menuStrip.BackColor = Color.FromArgb(245, 245, 245);
-
-                    int ctr = 0;
-                    foreach (ToolStripMenuItem itm in menuStrip.Items)
-                    {
-                        itm.BackColor = Color.FromArgb(245, 245, 245);
-                        
-                        ctr++;
-                    }
+                    //menuStrip.BackColor = Color.FromArgb(245, 245, 245);
 
                 }
                 catch (InvalidCastException exc)
@@ -49,10 +41,16 @@ namespace CSLabProject
                 }
             }
 
-            // Display a child form to show this is still an MDI application.
-            StudentDetails m = new StudentDetails();
+            // display intial forms
+            frmStudentDetails m = new frmStudentDetails();
             m.MdiParent = this;
             m.Show();
+
+            frmReportForm myReport = new frmReportForm();
+            myReport.MdiParent = this;
+            myReport.Show();
+
+            
         }
 
         private void windowsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,7 +85,30 @@ namespace CSLabProject
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
+            Dispose();
         }
+
+        private void studentDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmStudentDetails studForm = new frmStudentDetails();
+            studForm.MdiParent = this;
+
+            studForm.Show();
+        }
+
+        private void inventoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+    }
+
+    public static class GlobalVar
+    {
+        public static int frmCtrSD = 0;
     }
 }

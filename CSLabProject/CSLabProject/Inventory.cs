@@ -17,6 +17,15 @@ namespace CSLabProject
             InitializeComponent();
         }
 
+        public static class globals
+        {
+            public static string itemName = "";
+            public static string itemQuantity = "";
+            public static string addedAs = "";
+            public static string currentDate = "";
+            public static string position = "";
+            public static string medType = "";
+        }
         private void Inventory_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
@@ -26,6 +35,8 @@ namespace CSLabProject
         {
             AddToInventoryDialog addToInventoryDialog = new AddToInventoryDialog();
             addToInventoryDialog.ShowDialog();
+            string[] dataElements = new string[] { globals.itemQuantity, globals.medType, globals.currentDate, globals.addedAs, globals.position };
+            inventoryGrid.Items.Add(globals.itemName).SubItems.AddRange(dataElements);
         }
 
         private void BTNclose_Click(object sender, EventArgs e)

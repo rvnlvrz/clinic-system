@@ -1,6 +1,6 @@
 ﻿namespace CSLabProject
 {
-    partial class LoginForm
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,7 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.lblPasscode = new System.Windows.Forms.Label();
             this.tbxPass = new System.Windows.Forms.TextBox();
-            this.bntLogIn = new System.Windows.Forms.Button();
+            this.btnLogIn = new System.Windows.Forms.Button();
             this.tbxUser = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,7 +88,6 @@
             this.lblUser.Size = new System.Drawing.Size(58, 13);
             this.lblUser.TabIndex = 4;
             this.lblUser.Text = "Username:";
-            this.lblUser.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblPasscode
             // 
@@ -110,19 +109,19 @@
             this.tbxPass.Size = new System.Drawing.Size(184, 23);
             this.tbxPass.TabIndex = 2;
             // 
-            // bntLogIn
+            // btnLogIn
             // 
-            this.bntLogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.bntLogIn.FlatAppearance.BorderSize = 0;
-            this.bntLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntLogIn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bntLogIn.Location = new System.Drawing.Point(312, 264);
-            this.bntLogIn.Name = "bntLogIn";
-            this.bntLogIn.Size = new System.Drawing.Size(72, 23);
-            this.bntLogIn.TabIndex = 3;
-            this.bntLogIn.Text = "Log In";
-            this.bntLogIn.UseVisualStyleBackColor = false;
-            this.bntLogIn.Click += new System.EventHandler(this.bntLogIn_Click);
+            this.btnLogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.btnLogIn.FlatAppearance.BorderSize = 0;
+            this.btnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogIn.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnLogIn.Location = new System.Drawing.Point(312, 264);
+            this.btnLogIn.Name = "btnLogIn";
+            this.btnLogIn.Size = new System.Drawing.Size(72, 23);
+            this.btnLogIn.TabIndex = 3;
+            this.btnLogIn.Text = "Log In";
+            this.btnLogIn.UseVisualStyleBackColor = false;
+            this.btnLogIn.Click += new System.EventHandler(this.bntLogIn_Click);
             // 
             // tbxUser
             // 
@@ -143,14 +142,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // LoginForm
+            // frmLogin
             // 
+            this.AcceptButton = this.btnLogIn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(596, 361);
             this.Controls.Add(this.tbxUser);
-            this.Controls.Add(this.bntLogIn);
+            this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.tbxPass);
             this.Controls.Add(this.lblPasscode);
             this.Controls.Add(this.lblUser);
@@ -161,7 +161,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.MaximumSize = new System.Drawing.Size(612, 400);
             this.MinimumSize = new System.Drawing.Size(612, 400);
-            this.Name = "LoginForm";
+            this.Name = "frmLogin";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MAPÚA - Clinic Management System Login";
@@ -181,7 +181,7 @@
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblPasscode;
         private System.Windows.Forms.TextBox tbxPass;
-        private System.Windows.Forms.Button bntLogIn;
+        private System.Windows.Forms.Button btnLogIn;
         private System.Windows.Forms.TextBox tbxUser;
     }
 }
