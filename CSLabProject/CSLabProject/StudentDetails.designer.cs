@@ -1,6 +1,6 @@
 ﻿namespace CSLabProject
 {
-    partial class StudentDetails
+    partial class frmStudentDetails
     {
         /// <summary>
         /// Required designer variable.
@@ -86,9 +86,17 @@
             this.guradian_grpbx.Controls.Add(this.GRDN_textBoxMI);
             this.guradian_grpbx.Controls.Add(this.LabelGuardianMI);
             this.guradian_grpbx.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.guradian_grpbx.Location = new System.Drawing.Point(32, 308);
             this.guradian_grpbx.Name = "guradian_grpbx";
             this.guradian_grpbx.Size = new System.Drawing.Size(596, 212);
+=======
+            this.guradian_grpbx.Location = new System.Drawing.Point(21, 200);
+            this.guradian_grpbx.Margin = new System.Windows.Forms.Padding(2);
+            this.guradian_grpbx.Name = "guradian_grpbx";
+            this.guradian_grpbx.Padding = new System.Windows.Forms.Padding(2);
+            this.guradian_grpbx.Size = new System.Drawing.Size(397, 138);
+>>>>>>> refs/remotes/origin/master
             this.guradian_grpbx.TabIndex = 19;
             this.guradian_grpbx.TabStop = false;
             this.guradian_grpbx.Text = "GUARDIAN INFORMATION";
@@ -117,14 +125,24 @@
             "SISTER",
             "BROTHER",
             "OTHERS"});
+<<<<<<< HEAD
             this.comboBoxRelationship.Location = new System.Drawing.Point(15, 166);
+=======
+            this.comboBoxRelationship.Location = new System.Drawing.Point(10, 108);
+            this.comboBoxRelationship.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.comboBoxRelationship.Name = "comboBoxRelationship";
             this.comboBoxRelationship.Size = new System.Drawing.Size(234, 27);
             this.comboBoxRelationship.TabIndex = 17;
             // 
             // GRDN_textBoxMobileNum
             // 
+<<<<<<< HEAD
             this.GRDN_textBoxMobileNum.Location = new System.Drawing.Point(15, 106);
+=======
+            this.GRDN_textBoxMobileNum.Location = new System.Drawing.Point(10, 69);
+            this.GRDN_textBoxMobileNum.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.GRDN_textBoxMobileNum.Name = "GRDN_textBoxMobileNum";
             this.GRDN_textBoxMobileNum.Size = new System.Drawing.Size(232, 26);
             this.GRDN_textBoxMobileNum.TabIndex = 15;
@@ -143,7 +161,12 @@
             // 
             // GRDN_textBoxLandLine
             // 
+<<<<<<< HEAD
             this.GRDN_textBoxLandLine.Location = new System.Drawing.Point(262, 105);
+=======
+            this.GRDN_textBoxLandLine.Location = new System.Drawing.Point(175, 68);
+            this.GRDN_textBoxLandLine.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.GRDN_textBoxLandLine.Name = "GRDN_textBoxLandLine";
             this.GRDN_textBoxLandLine.Size = new System.Drawing.Size(156, 26);
             this.GRDN_textBoxLandLine.TabIndex = 16;
@@ -162,7 +185,12 @@
             // 
             // GRDN_textBoxFirstName
             // 
+<<<<<<< HEAD
             this.GRDN_textBoxFirstName.Location = new System.Drawing.Point(15, 52);
+=======
+            this.GRDN_textBoxFirstName.Location = new System.Drawing.Point(10, 34);
+            this.GRDN_textBoxFirstName.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.GRDN_textBoxFirstName.Name = "GRDN_textBoxFirstName";
             this.GRDN_textBoxFirstName.Size = new System.Drawing.Size(232, 26);
             this.GRDN_textBoxFirstName.TabIndex = 12;
@@ -181,7 +209,12 @@
             // 
             // GRDN_textBoxLastName
             // 
+<<<<<<< HEAD
             this.GRDN_textBoxLastName.Location = new System.Drawing.Point(262, 51);
+=======
+            this.GRDN_textBoxLastName.Location = new System.Drawing.Point(175, 33);
+            this.GRDN_textBoxLastName.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.GRDN_textBoxLastName.Name = "GRDN_textBoxLastName";
             this.GRDN_textBoxLastName.Size = new System.Drawing.Size(236, 26);
             this.GRDN_textBoxLastName.TabIndex = 13;
@@ -200,7 +233,12 @@
             // 
             // GRDN_textBoxMI
             // 
+<<<<<<< HEAD
             this.GRDN_textBoxMI.Location = new System.Drawing.Point(508, 52);
+=======
+            this.GRDN_textBoxMI.Location = new System.Drawing.Point(339, 34);
+            this.GRDN_textBoxMI.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.GRDN_textBoxMI.Name = "GRDN_textBoxMI";
             this.GRDN_textBoxMI.Size = new System.Drawing.Size(48, 26);
             this.GRDN_textBoxMI.TabIndex = 14;
@@ -219,7 +257,12 @@
             // 
             // buttonConfirm
             // 
+<<<<<<< HEAD
             this.buttonConfirm.Location = new System.Drawing.Point(87, 553);
+=======
+            this.buttonConfirm.Location = new System.Drawing.Point(118, 365);
+            this.buttonConfirm.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.buttonConfirm.Name = "buttonConfirm";
             this.buttonConfirm.Size = new System.Drawing.Size(123, 32);
             this.buttonConfirm.TabIndex = 18;
@@ -229,7 +272,12 @@
             // 
             // buttonCLR
             // 
+<<<<<<< HEAD
             this.buttonCLR.Location = new System.Drawing.Point(268, 553);
+=======
+            this.buttonCLR.Location = new System.Drawing.Point(239, 365);
+            this.buttonCLR.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.buttonCLR.Name = "buttonCLR";
             this.buttonCLR.Size = new System.Drawing.Size(170, 32);
             this.buttonCLR.TabIndex = 19;
@@ -261,16 +309,29 @@
             this.student_grpbx.Controls.Add(this.STUD_textBoxMI);
             this.student_grpbx.Controls.Add(this.LabelStudentMI);
             this.student_grpbx.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.student_grpbx.Location = new System.Drawing.Point(32, 28);
             this.student_grpbx.Name = "student_grpbx";
             this.student_grpbx.Size = new System.Drawing.Size(596, 255);
+=======
+            this.student_grpbx.Location = new System.Drawing.Point(21, 18);
+            this.student_grpbx.Margin = new System.Windows.Forms.Padding(2);
+            this.student_grpbx.Name = "student_grpbx";
+            this.student_grpbx.Padding = new System.Windows.Forms.Padding(2);
+            this.student_grpbx.Size = new System.Drawing.Size(397, 166);
+>>>>>>> refs/remotes/origin/master
             this.student_grpbx.TabIndex = 18;
             this.student_grpbx.TabStop = false;
             this.student_grpbx.Text = "PATIENT INFORMATION";
             // 
             // STUD_textBoxMobileNum
             // 
+<<<<<<< HEAD
             this.STUD_textBoxMobileNum.Location = new System.Drawing.Point(16, 218);
+=======
+            this.STUD_textBoxMobileNum.Location = new System.Drawing.Point(11, 142);
+            this.STUD_textBoxMobileNum.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.STUD_textBoxMobileNum.Name = "STUD_textBoxMobileNum";
             this.STUD_textBoxMobileNum.Size = new System.Drawing.Size(232, 26);
             this.STUD_textBoxMobileNum.TabIndex = 10;
@@ -289,7 +350,12 @@
             // 
             // STUD_textBoxLandLine
             // 
+<<<<<<< HEAD
             this.STUD_textBoxLandLine.Location = new System.Drawing.Point(262, 217);
+=======
+            this.STUD_textBoxLandLine.Location = new System.Drawing.Point(175, 141);
+            this.STUD_textBoxLandLine.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.STUD_textBoxLandLine.Name = "STUD_textBoxLandLine";
             this.STUD_textBoxLandLine.Size = new System.Drawing.Size(236, 26);
             this.STUD_textBoxLandLine.TabIndex = 11;
@@ -308,7 +374,12 @@
             // 
             // STUD_textBoxYrLvl
             // 
+<<<<<<< HEAD
             this.STUD_textBoxYrLvl.Location = new System.Drawing.Point(386, 114);
+=======
+            this.STUD_textBoxYrLvl.Location = new System.Drawing.Point(257, 74);
+            this.STUD_textBoxYrLvl.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.STUD_textBoxYrLvl.Name = "STUD_textBoxYrLvl";
             this.STUD_textBoxYrLvl.Size = new System.Drawing.Size(62, 26);
             this.STUD_textBoxYrLvl.TabIndex = 7;
@@ -327,7 +398,12 @@
             // 
             // STUD_textBoxProram
             // 
+<<<<<<< HEAD
             this.STUD_textBoxProram.Location = new System.Drawing.Point(284, 114);
+=======
+            this.STUD_textBoxProram.Location = new System.Drawing.Point(189, 74);
+            this.STUD_textBoxProram.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.STUD_textBoxProram.Name = "STUD_textBoxProram";
             this.STUD_textBoxProram.Size = new System.Drawing.Size(54, 26);
             this.STUD_textBoxProram.TabIndex = 6;
@@ -358,7 +434,12 @@
             // 
             this.STUD_radioButtonFemale.AutoSize = true;
             this.STUD_radioButtonFemale.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.STUD_radioButtonFemale.Location = new System.Drawing.Point(338, 158);
+=======
+            this.STUD_radioButtonFemale.Location = new System.Drawing.Point(225, 103);
+            this.STUD_radioButtonFemale.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.STUD_radioButtonFemale.Name = "STUD_radioButtonFemale";
             this.STUD_radioButtonFemale.Size = new System.Drawing.Size(90, 25);
             this.STUD_radioButtonFemale.TabIndex = 9;
@@ -370,7 +451,12 @@
             // 
             this.STUD_radioButtonMale.AutoSize = true;
             this.STUD_radioButtonMale.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.STUD_radioButtonMale.Location = new System.Drawing.Point(262, 160);
+=======
+            this.STUD_radioButtonMale.Location = new System.Drawing.Point(175, 104);
+            this.STUD_radioButtonMale.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.STUD_radioButtonMale.Name = "STUD_radioButtonMale";
             this.STUD_radioButtonMale.Size = new System.Drawing.Size(73, 25);
             this.STUD_radioButtonMale.TabIndex = 8;
@@ -381,7 +467,12 @@
             // STUD_textBoxFirstName
             // 
             this.STUD_textBoxFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+<<<<<<< HEAD
             this.STUD_textBoxFirstName.Location = new System.Drawing.Point(16, 58);
+=======
+            this.STUD_textBoxFirstName.Location = new System.Drawing.Point(11, 38);
+            this.STUD_textBoxFirstName.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.STUD_textBoxFirstName.Name = "STUD_textBoxFirstName";
             this.STUD_textBoxFirstName.Size = new System.Drawing.Size(232, 26);
             this.STUD_textBoxFirstName.TabIndex = 1;
@@ -390,7 +481,12 @@
             // 
             // STUD_textBoxStudentNumber
             // 
+<<<<<<< HEAD
             this.STUD_textBoxStudentNumber.Location = new System.Drawing.Point(94, 114);
+=======
+            this.STUD_textBoxStudentNumber.Location = new System.Drawing.Point(63, 74);
+            this.STUD_textBoxStudentNumber.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.STUD_textBoxStudentNumber.Name = "STUD_textBoxStudentNumber";
             this.STUD_textBoxStudentNumber.Size = new System.Drawing.Size(168, 26);
             this.STUD_textBoxStudentNumber.TabIndex = 5;
@@ -409,7 +505,12 @@
             // 
             // STUD_textBoxAge
             // 
+<<<<<<< HEAD
             this.STUD_textBoxAge.Location = new System.Drawing.Point(16, 114);
+=======
+            this.STUD_textBoxAge.Location = new System.Drawing.Point(11, 74);
+            this.STUD_textBoxAge.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.STUD_textBoxAge.Name = "STUD_textBoxAge";
             this.STUD_textBoxAge.Size = new System.Drawing.Size(54, 26);
             this.STUD_textBoxAge.TabIndex = 4;
@@ -438,7 +539,12 @@
             // 
             // STUD_textBoxLastName
             // 
+<<<<<<< HEAD
             this.STUD_textBoxLastName.Location = new System.Drawing.Point(262, 58);
+=======
+            this.STUD_textBoxLastName.Location = new System.Drawing.Point(175, 38);
+            this.STUD_textBoxLastName.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.STUD_textBoxLastName.Name = "STUD_textBoxLastName";
             this.STUD_textBoxLastName.Size = new System.Drawing.Size(236, 26);
             this.STUD_textBoxLastName.TabIndex = 2;
@@ -457,7 +563,12 @@
             // 
             // STUD_textBoxMI
             // 
+<<<<<<< HEAD
             this.STUD_textBoxMI.Location = new System.Drawing.Point(510, 55);
+=======
+            this.STUD_textBoxMI.Location = new System.Drawing.Point(340, 36);
+            this.STUD_textBoxMI.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> refs/remotes/origin/master
             this.STUD_textBoxMI.Name = "STUD_textBoxMI";
             this.STUD_textBoxMI.Size = new System.Drawing.Size(48, 26);
             this.STUD_textBoxMI.TabIndex = 3;
@@ -485,6 +596,7 @@
             this.warning_label.TabIndex = 20;
             this.warning_label.Text = ".";
             // 
+<<<<<<< HEAD
             // buttonCNCL
             // 
             this.buttonCNCL.Location = new System.Drawing.Point(480, 553);
@@ -496,6 +608,9 @@
             this.buttonCNCL.Click += new System.EventHandler(this.buttonCNCL_Click);
             // 
             // StudentDetails
+=======
+            // frmStudentDetails
+>>>>>>> refs/remotes/origin/master
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -507,7 +622,12 @@
             this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.guradian_grpbx);
             this.Controls.Add(this.student_grpbx);
+<<<<<<< HEAD
             this.Name = "StudentDetails";
+=======
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "frmStudentDetails";
+>>>>>>> refs/remotes/origin/master
             this.Text = "Student Details";
             this.Load += new System.EventHandler(this.StudentDetails_Load);
             this.guradian_grpbx.ResumeLayout(false);
