@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace CSLabProject
 {
@@ -36,6 +37,7 @@ namespace CSLabProject
             WindowState = FormWindowState.Maximized;
             searchKey_txtbox.Visible = false;
             commenceSearch_btn.Visible = false;
+
         }
 
         private void BTNcreateNew_Click(object sender, EventArgs e)
@@ -45,7 +47,10 @@ namespace CSLabProject
             string[] dataElements = new string[] { globals.itemQuantity, globals.medType, globals.currentDate, globals.addedAs, globals.position };
             if (globals.flag == 1)
             {
+                Directory.CreateDirectory(StudentDetails.globals.currentDirectoryCopy);
                 inventoryGrid.Items.Add(globals.itemName).SubItems.AddRange(dataElements);
+                File.WriteAllText(StudentDetails.globals.currentDirectoryCopy + "InventoryData.txt",globals.itemName);
+                File.WriteAllLines(StudentDetails.globals.currentDirectoryCopy + "InventoryDataElements.txt", dataElements);
             }
         }
 
