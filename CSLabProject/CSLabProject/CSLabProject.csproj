@@ -72,18 +72,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SearchInventoryDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SearchInventoryDialog.Designer.cs">
-      <DependentUpon>SearchInventoryDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="searchResultsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="searchResultsForm.Designer.cs">
-      <DependentUpon>searchResultsForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="StudentDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,12 +100,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SearchInventoryDialog.resx">
-      <DependentUpon>SearchInventoryDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="searchResultsForm.resx">
-      <DependentUpon>searchResultsForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="StudentDetails.resx">
       <DependentUpon>StudentDetails.cs</DependentUpon>
     </EmbeddedResource>

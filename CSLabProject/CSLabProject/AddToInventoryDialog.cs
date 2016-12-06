@@ -44,20 +44,70 @@ namespace CSLabProject
             }
         }
 
+        public bool checkIfAllAreFilled()
+        {
+            if(ItemName_txtbx.Text == string.Empty)
+            {
+                itemName_lbl.ForeColor = Color.Yellow;
+                Inventory.globals.flag = 0;
+                return false;
+            }
+            else if(ItemName_txtbx.Text != string.Empty)
+            {
+                itemName_lbl.ForeColor = Color.White;
+                Inventory.globals.flag = 1;
+            }
+
+            if (quantity_txtbx.Text == string.Empty)
+            {
+                quantity_lbl.ForeColor = Color.Yellow;
+                Inventory.globals.flag = 0;
+            }
+
+            else if(quantity_txtbx.Text != string.Empty)
+            {
+                quantity_lbl.ForeColor = Color.White;
+                Inventory.globals.flag = 1;
+                return true;
+            }
+
+            if(quantity_txtbx.Text == string.Empty && ItemName_txtbx.Text == string.Empty)
+            {
+                quantity_lbl.ForeColor = Color.Yellow;
+                itemName_lbl.ForeColor = Color.Yellow;
+                Inventory.globals.flag = 0;
+            }
+            else if(quantity_txtbx.Text != string.Empty && ItemName_txtbx.Text != string.Empty)
+            {
+                quantity_lbl.ForeColor = Color.White;
+                itemName_lbl.ForeColor = Color.White;
+                Inventory.globals.flag = 1;
+            }
+
+            if (Inventory.globals.flag == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         private void btn_add_Click(object sender, EventArgs e)
         {
 
-            validateInput();
-            if (ItemName_txtbx.Text == string.Empty || quantity_txtbx.Text == string.Empty)
+            bool allAreFilled = checkIfAllAreFilled();
+            if (!allAreFilled)
             {
                 warnLabel.Text = "You cannot leave a field empty.";
             }
-            else
+            else if(allAreFilled)
             {
+                validateInput();
                 warnLabel.Text = string.Empty;
+                Dispose();
             }
-            Dispose();
 
 
 
@@ -87,6 +137,42 @@ namespace CSLabProject
             else if (e.KeyChar == 8)
             {
                 e.Handled = false;
+            }
+        }
+
+        private void ItemName_txtbx_Click(object sender, EventArgs e)
+        {
+            warnLabel.Text = string.Empty;
+            itemName_lbl.ForeColor = Color.White;
+        }
+
+        private void quantity_txtbx_Click(object sender, EventArgs e)
+        {
+            warnLabel.Text = string.Empty;
+            quantity_lbl.ForeColor = Color.White;
+        }
+
+        private void ItemName_txtbx_Leave(object sender, EventArgs e)
+        {
+            if(ItemName_txtbx.Text == string.Empty)
+            {
+                itemName_lbl.ForeColor = Color.Yellow;
+            }
+            else
+            {
+                itemName_lbl.ForeColor = Color.White;
+            }
+        }
+
+        private void quantity_txtbx_Leave(object sender, EventArgs e)
+        {
+            if(quantity_txtbx.Text == string.Empty)
+            {
+                quantity_lbl.ForeColor = Color.Yellow;
+            }
+            else
+            {
+                quantity_lbl.ForeColor = Color.White;
             }
         }
     }
