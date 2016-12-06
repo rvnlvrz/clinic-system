@@ -16,8 +16,8 @@ namespace CSLabProject
         //Encrypt
         public static string EncryptString(string userName, string passCode)
         {
-            byte[] uNameByte = Encoding.UTF8.GetBytes(stringIV);
-            byte[] passByte = Encoding.UTF8.GetBytes(userName);
+            byte[] ivByte = Encoding.UTF8.GetBytes(stringIV);
+            byte[] userByte = Encoding.UTF8.GetBytes(userName);
 
             PasswordDeriveBytes passwd = new PasswordDeriveBytes(passCode, null); // non salted
 
@@ -25,10 +25,10 @@ namespace CSLabProject
             RijndaelManaged symmetricKey = new RijndaelManaged();
             symmetricKey.Mode = CipherMode.CBC;
 
-            ICryptoTransform encryptor = symmetricKey.CreateEncryptor(keyByte, uNameByte);
+            ICryptoTransform encryptor = symmetricKey.CreateEncryptor(keyByte, ivByte);
             MemoryStream memStream = new MemoryStream();
             CryptoStream cryptStream = new CryptoStream(memStream, encryptor, CryptoStreamMode.Write);
-            cryptStream.Write(uNameByte, 0, uNameByte.Length);
+            cryptStream.Write(userByte, 0, userByte.Length);
             cryptStream.FlushFinalBlock();
 
             byte[] ciperByte = memStream.ToArray();

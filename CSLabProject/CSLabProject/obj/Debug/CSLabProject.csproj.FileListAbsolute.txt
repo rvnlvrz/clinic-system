@@ -23,7 +23,6 @@ E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\bin\Debug\CSLabProject.e
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.exe
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.pdb
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.csprojResolveAssemblyReference.cache
-E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.LoginForm.resources
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.Properties.Resources.resources
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.csproj.GenerateResource.Cache
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\bin\Debug\CSLabProject.exe
@@ -46,3 +45,4 @@ E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.I
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.frmMain.resources
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.frmReportForm.resources
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.frmStudentDetails.resources
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.frmLogin.resources
