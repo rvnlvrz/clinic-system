@@ -58,7 +58,6 @@
     <Compile Include="Inventory.designer.cs">
       <DependentUpon>Inventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginCheck.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,12 +72,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportForm.Designer.cs">
-      <DependentUpon>ReportForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="StudentDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,9 +100,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ReportForm.resx">
-      <DependentUpon>ReportForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="StudentDetails.resx">
       <DependentUpon>StudentDetails.cs</DependentUpon>
     </EmbeddedResource>

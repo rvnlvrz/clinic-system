@@ -1,6 +1,6 @@
 ﻿namespace CSLabProject
 {
-    partial class frmLogin
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -88,6 +88,7 @@
             this.lblUser.Size = new System.Drawing.Size(58, 13);
             this.lblUser.TabIndex = 4;
             this.lblUser.Text = "Username:";
+            this.lblUser.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblPasscode
             // 
@@ -142,9 +143,8 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // frmLogin
+            // LoginForm
             // 
-            this.AcceptButton = this.btnLogIn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -161,7 +161,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.MaximumSize = new System.Drawing.Size(612, 400);
             this.MinimumSize = new System.Drawing.Size(612, 400);
-            this.Name = "frmLogin";
+            this.Name = "LoginForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MAPÚA - Clinic Management System Login";

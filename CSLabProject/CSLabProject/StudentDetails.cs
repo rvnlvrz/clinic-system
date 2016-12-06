@@ -1,20 +1,20 @@
-<<<<<<< HEAD
 using System;
 using System.Collections.Generic;
-=======
-﻿using System;
->>>>>>> refs/remotes/origin/master
 using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
 
 namespace CSLabProject
 {
-    public partial class frmStudentDetails : Form
+    public partial class StudentDetails : Form
     {
-        public frmStudentDetails()
+        public StudentDetails()
         {
             InitializeComponent();
         }
@@ -28,19 +28,6 @@ namespace CSLabProject
             string directory = direc.Replace(@"\bin\Debug\", "");
             globals.currentDirectory = directory + @"\Raw Program Data\";
             STUD_radioButtonMale.Select();
-<<<<<<< HEAD
-=======
-            //foreach (TextBox tb in student_grpbx.Controls.OfType<TextBox>().Where(x => x.CausesValidation == true))
-            //{
-            //    tb.Validating += textBox_Validating;
-            //}
-            //foreach (TextBox tb in guradian_grpbx.Controls.OfType<TextBox>().Where(x => x.CausesValidation == true))
-            //{
-            //    tb.Validating += textBox_Validating;
-            //}
-            GlobalVar.frmCtrSD++;
-            this.Text += " " + GlobalVar.frmCtrSD.ToString();
->>>>>>> refs/remotes/origin/master
         }
 
         public class globals
@@ -854,7 +841,3 @@ namespace CSLabProject
         }
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/master
