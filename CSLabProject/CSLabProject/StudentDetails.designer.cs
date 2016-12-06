@@ -1,6 +1,6 @@
 ﻿namespace CSLabProject
 {
-    partial class StudentDetails
+    partial class frmStudentDetails
     {
         /// <summary>
         /// Required designer variable.
@@ -86,9 +86,9 @@
             this.guradian_grpbx.Controls.Add(this.LabelGuardianMI);
             this.guradian_grpbx.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guradian_grpbx.Location = new System.Drawing.Point(21, 200);
-            this.guradian_grpbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guradian_grpbx.Margin = new System.Windows.Forms.Padding(2);
             this.guradian_grpbx.Name = "guradian_grpbx";
-            this.guradian_grpbx.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guradian_grpbx.Padding = new System.Windows.Forms.Padding(2);
             this.guradian_grpbx.Size = new System.Drawing.Size(397, 138);
             this.guradian_grpbx.TabIndex = 19;
             this.guradian_grpbx.TabStop = false;
@@ -120,7 +120,7 @@
             "BROTHER",
             "OTHERS"});
             this.comboBoxRelationship.Location = new System.Drawing.Point(10, 108);
-            this.comboBoxRelationship.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxRelationship.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxRelationship.Name = "comboBoxRelationship";
             this.comboBoxRelationship.Size = new System.Drawing.Size(157, 21);
             this.comboBoxRelationship.TabIndex = 17;
@@ -128,7 +128,7 @@
             // GRDN_textBoxMobileNum
             // 
             this.GRDN_textBoxMobileNum.Location = new System.Drawing.Point(10, 69);
-            this.GRDN_textBoxMobileNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GRDN_textBoxMobileNum.Margin = new System.Windows.Forms.Padding(2);
             this.GRDN_textBoxMobileNum.Name = "GRDN_textBoxMobileNum";
             this.GRDN_textBoxMobileNum.Size = new System.Drawing.Size(156, 20);
             this.GRDN_textBoxMobileNum.TabIndex = 15;
@@ -149,7 +149,7 @@
             // GRDN_textBoxLandLine
             // 
             this.GRDN_textBoxLandLine.Location = new System.Drawing.Point(175, 68);
-            this.GRDN_textBoxLandLine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GRDN_textBoxLandLine.Margin = new System.Windows.Forms.Padding(2);
             this.GRDN_textBoxLandLine.Name = "GRDN_textBoxLandLine";
             this.GRDN_textBoxLandLine.Size = new System.Drawing.Size(105, 20);
             this.GRDN_textBoxLandLine.TabIndex = 16;
@@ -170,7 +170,7 @@
             // GRDN_textBoxFirstName
             // 
             this.GRDN_textBoxFirstName.Location = new System.Drawing.Point(10, 34);
-            this.GRDN_textBoxFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GRDN_textBoxFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.GRDN_textBoxFirstName.Name = "GRDN_textBoxFirstName";
             this.GRDN_textBoxFirstName.Size = new System.Drawing.Size(156, 20);
             this.GRDN_textBoxFirstName.TabIndex = 12;
@@ -191,7 +191,7 @@
             // GRDN_textBoxLastName
             // 
             this.GRDN_textBoxLastName.Location = new System.Drawing.Point(175, 33);
-            this.GRDN_textBoxLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GRDN_textBoxLastName.Margin = new System.Windows.Forms.Padding(2);
             this.GRDN_textBoxLastName.Name = "GRDN_textBoxLastName";
             this.GRDN_textBoxLastName.Size = new System.Drawing.Size(159, 20);
             this.GRDN_textBoxLastName.TabIndex = 13;
@@ -212,7 +212,7 @@
             // GRDN_textBoxMI
             // 
             this.GRDN_textBoxMI.Location = new System.Drawing.Point(339, 34);
-            this.GRDN_textBoxMI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GRDN_textBoxMI.Margin = new System.Windows.Forms.Padding(2);
             this.GRDN_textBoxMI.Name = "GRDN_textBoxMI";
             this.GRDN_textBoxMI.Size = new System.Drawing.Size(33, 20);
             this.GRDN_textBoxMI.TabIndex = 14;
@@ -233,7 +233,7 @@
             // buttonConfirm
             // 
             this.buttonConfirm.Location = new System.Drawing.Point(118, 365);
-            this.buttonConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.buttonConfirm.Name = "buttonConfirm";
             this.buttonConfirm.Size = new System.Drawing.Size(82, 21);
             this.buttonConfirm.TabIndex = 18;
@@ -244,7 +244,7 @@
             // buttonCLR
             // 
             this.buttonCLR.Location = new System.Drawing.Point(239, 365);
-            this.buttonCLR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCLR.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCLR.Name = "buttonCLR";
             this.buttonCLR.Size = new System.Drawing.Size(113, 21);
             this.buttonCLR.TabIndex = 19;
@@ -277,9 +277,9 @@
             this.student_grpbx.Controls.Add(this.LabelStudentMI);
             this.student_grpbx.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.student_grpbx.Location = new System.Drawing.Point(21, 18);
-            this.student_grpbx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.student_grpbx.Margin = new System.Windows.Forms.Padding(2);
             this.student_grpbx.Name = "student_grpbx";
-            this.student_grpbx.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.student_grpbx.Padding = new System.Windows.Forms.Padding(2);
             this.student_grpbx.Size = new System.Drawing.Size(397, 166);
             this.student_grpbx.TabIndex = 18;
             this.student_grpbx.TabStop = false;
@@ -288,7 +288,7 @@
             // STUD_textBoxMobileNum
             // 
             this.STUD_textBoxMobileNum.Location = new System.Drawing.Point(11, 142);
-            this.STUD_textBoxMobileNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.STUD_textBoxMobileNum.Margin = new System.Windows.Forms.Padding(2);
             this.STUD_textBoxMobileNum.Name = "STUD_textBoxMobileNum";
             this.STUD_textBoxMobileNum.Size = new System.Drawing.Size(156, 20);
             this.STUD_textBoxMobileNum.TabIndex = 10;
@@ -309,7 +309,7 @@
             // STUD_textBoxLandLine
             // 
             this.STUD_textBoxLandLine.Location = new System.Drawing.Point(175, 141);
-            this.STUD_textBoxLandLine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.STUD_textBoxLandLine.Margin = new System.Windows.Forms.Padding(2);
             this.STUD_textBoxLandLine.Name = "STUD_textBoxLandLine";
             this.STUD_textBoxLandLine.Size = new System.Drawing.Size(159, 20);
             this.STUD_textBoxLandLine.TabIndex = 11;
@@ -330,7 +330,7 @@
             // STUD_textBoxYrLvl
             // 
             this.STUD_textBoxYrLvl.Location = new System.Drawing.Point(257, 74);
-            this.STUD_textBoxYrLvl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.STUD_textBoxYrLvl.Margin = new System.Windows.Forms.Padding(2);
             this.STUD_textBoxYrLvl.Name = "STUD_textBoxYrLvl";
             this.STUD_textBoxYrLvl.Size = new System.Drawing.Size(43, 20);
             this.STUD_textBoxYrLvl.TabIndex = 7;
@@ -351,7 +351,7 @@
             // STUD_textBoxProram
             // 
             this.STUD_textBoxProram.Location = new System.Drawing.Point(189, 74);
-            this.STUD_textBoxProram.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.STUD_textBoxProram.Margin = new System.Windows.Forms.Padding(2);
             this.STUD_textBoxProram.Name = "STUD_textBoxProram";
             this.STUD_textBoxProram.Size = new System.Drawing.Size(37, 20);
             this.STUD_textBoxProram.TabIndex = 6;
@@ -385,7 +385,7 @@
             this.STUD_radioButtonFemale.AutoSize = true;
             this.STUD_radioButtonFemale.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STUD_radioButtonFemale.Location = new System.Drawing.Point(225, 103);
-            this.STUD_radioButtonFemale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.STUD_radioButtonFemale.Margin = new System.Windows.Forms.Padding(2);
             this.STUD_radioButtonFemale.Name = "STUD_radioButtonFemale";
             this.STUD_radioButtonFemale.Size = new System.Drawing.Size(62, 17);
             this.STUD_radioButtonFemale.TabIndex = 9;
@@ -398,7 +398,7 @@
             this.STUD_radioButtonMale.AutoSize = true;
             this.STUD_radioButtonMale.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STUD_radioButtonMale.Location = new System.Drawing.Point(175, 104);
-            this.STUD_radioButtonMale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.STUD_radioButtonMale.Margin = new System.Windows.Forms.Padding(2);
             this.STUD_radioButtonMale.Name = "STUD_radioButtonMale";
             this.STUD_radioButtonMale.Size = new System.Drawing.Size(51, 17);
             this.STUD_radioButtonMale.TabIndex = 8;
@@ -410,7 +410,7 @@
             // 
             this.STUD_textBoxFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.STUD_textBoxFirstName.Location = new System.Drawing.Point(11, 38);
-            this.STUD_textBoxFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.STUD_textBoxFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.STUD_textBoxFirstName.Name = "STUD_textBoxFirstName";
             this.STUD_textBoxFirstName.Size = new System.Drawing.Size(155, 20);
             this.STUD_textBoxFirstName.TabIndex = 1;
@@ -420,7 +420,7 @@
             // STUD_textBoxStudentNumber
             // 
             this.STUD_textBoxStudentNumber.Location = new System.Drawing.Point(63, 74);
-            this.STUD_textBoxStudentNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.STUD_textBoxStudentNumber.Margin = new System.Windows.Forms.Padding(2);
             this.STUD_textBoxStudentNumber.Name = "STUD_textBoxStudentNumber";
             this.STUD_textBoxStudentNumber.Size = new System.Drawing.Size(113, 20);
             this.STUD_textBoxStudentNumber.TabIndex = 5;
@@ -441,7 +441,7 @@
             // STUD_textBoxAge
             // 
             this.STUD_textBoxAge.Location = new System.Drawing.Point(11, 74);
-            this.STUD_textBoxAge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.STUD_textBoxAge.Margin = new System.Windows.Forms.Padding(2);
             this.STUD_textBoxAge.Name = "STUD_textBoxAge";
             this.STUD_textBoxAge.Size = new System.Drawing.Size(37, 20);
             this.STUD_textBoxAge.TabIndex = 4;
@@ -473,7 +473,7 @@
             // STUD_textBoxLastName
             // 
             this.STUD_textBoxLastName.Location = new System.Drawing.Point(175, 38);
-            this.STUD_textBoxLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.STUD_textBoxLastName.Margin = new System.Windows.Forms.Padding(2);
             this.STUD_textBoxLastName.Name = "STUD_textBoxLastName";
             this.STUD_textBoxLastName.Size = new System.Drawing.Size(159, 20);
             this.STUD_textBoxLastName.TabIndex = 2;
@@ -494,7 +494,7 @@
             // STUD_textBoxMI
             // 
             this.STUD_textBoxMI.Location = new System.Drawing.Point(340, 36);
-            this.STUD_textBoxMI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.STUD_textBoxMI.Margin = new System.Windows.Forms.Padding(2);
             this.STUD_textBoxMI.Name = "STUD_textBoxMI";
             this.STUD_textBoxMI.Size = new System.Drawing.Size(33, 20);
             this.STUD_textBoxMI.TabIndex = 3;
@@ -524,7 +524,7 @@
             this.warning_label.TabIndex = 20;
             this.warning_label.Text = ".";
             // 
-            // StudentDetails
+            // frmStudentDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -535,8 +535,8 @@
             this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.guradian_grpbx);
             this.Controls.Add(this.student_grpbx);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "StudentDetails";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "frmStudentDetails";
             this.Text = "Student Details";
             this.Load += new System.EventHandler(this.StudentDetails_Load);
             this.guradian_grpbx.ResumeLayout(false);
