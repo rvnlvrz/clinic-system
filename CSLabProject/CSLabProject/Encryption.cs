@@ -45,7 +45,5 @@ namespace CSLabProject
 
             return Convert.ToBase64String(ciperByte);
         }
-
-        //public static string
     }
 }
