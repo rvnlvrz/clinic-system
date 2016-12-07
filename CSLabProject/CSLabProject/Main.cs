@@ -43,7 +43,7 @@ namespace CSLabProject
 
             // display intial forms
 
-            StudentDetails m = new StudentDetails();
+            frmStudentDetails m = new frmStudentDetails();
             m.MdiParent = this;
             GlobalVar.frmCtrSD++;
             m.Text += " " + GlobalVar.frmCtrSD.ToString();
