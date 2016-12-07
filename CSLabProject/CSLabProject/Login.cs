@@ -62,7 +62,12 @@ namespace CSLabProject
             {
                 if (ctrl is TextBox)
                     ctrl.ResetText();
+
+                if (ctrl.Name == "tbxUser")
+                    ctrl.Focus();
             }
+
+            
         }
 
 
