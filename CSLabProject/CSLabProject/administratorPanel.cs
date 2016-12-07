@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CSLabProject
@@ -27,7 +20,10 @@ namespace CSLabProject
 
         private void btn_administration_Click(object sender, EventArgs e)
         {
-
+            frmAddUser myAddForm = new frmAddUser();
+            Hide();
+            myAddForm.ShowDialog();
+            Show();
         }
 
         private void btn_student_Click(object sender, EventArgs e)
@@ -54,6 +50,7 @@ namespace CSLabProject
         private void administratorPanel_Load(object sender, EventArgs e)
         {
             ControlBox = false;
+            lblUser.Text = GlobalVar.accessUser;
         }
 
         private void label10_Click(object sender, EventArgs e)

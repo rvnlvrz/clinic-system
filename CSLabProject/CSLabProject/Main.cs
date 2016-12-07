@@ -146,5 +146,6 @@ namespace CSLabProject
     public static class GlobalVar
     {
         public static int frmCtrSD = 0;
+        public static string accessUser = " ";
     }
 }
