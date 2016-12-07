@@ -293,6 +293,7 @@
             this.Name = "frmInventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Inventory";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmInventory_FormClosing);
             this.Load += new System.EventHandler(this.Inventory_Load);
             this.grpbxInventoryTools.ResumeLayout(false);
             this.grpbxUserDetails.ResumeLayout(false);

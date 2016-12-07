@@ -43,22 +43,19 @@ namespace CSLabProject
 
             // display intial forms
 
-            frmStudentDetails m = new frmStudentDetails();
-            m.MdiParent = this;
-            GlobalVar.frmCtrSD++;
-            m.Text += " " + GlobalVar.frmCtrSD.ToString();
-            m.Show();
+            //frmStudentDetails m = new frmStudentDetails();
+            //m.MdiParent = this;
+            //GlobalVar.frmCtrSD++;
+            //m.Text += " " + GlobalVar.frmCtrSD.ToString();
+            //m.Show();
 
             //frmStudentDetails m = new frmStudentDetails();
             //m.MdiParent = this;
             //m.Show();
 
-            frmReportForm myReport = new frmReportForm();
-            myReport.MdiParent = this;
-            myReport.Show();
-
-            
-
+            //frmReportForm myReport = new frmReportForm();
+            //myReport.MdiParent = this;
+            //myReport.Show();
         }
 
         private void windowsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,16 +101,44 @@ namespace CSLabProject
             studForm.Show();
         }
 
-        private void inventoryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmInventory invForm = new frmInventory();
-            invForm.MdiParent = this;
-            invForm.Show();
-        }
-
         private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void menuVInventory_Click(object sender, EventArgs e)
+        {
+            // checks whether the form is already open and maximizes it
+            FormCollection frms = Application.OpenForms;
+            foreach (Form frm in frms)
+            {
+                if (frm.Name == "frmInventory")
+                {
+                    frm.WindowState = FormWindowState.Maximized;
+                    return;
+                }
+            }
+
+            frmInventory invForm = new frmInventory();
+            invForm.MdiParent = this;
+            invForm.Show();
+
+        }
+
+        private void menuVDetails_Click(object sender, EventArgs e)
+        {
+            frmStudentDetails studDet = new frmStudentDetails();
+            studDet.MdiParent = this;
+            GlobalVar.frmCtrSD++;
+            studDet.Text += " " + GlobalVar.frmCtrSD.ToString();
+            studDet.Show();
+        }
+
+        private void menuVReport_Click(object sender, EventArgs e)
+        {
+            frmReportForm repForm = new frmReportForm();
+            repForm.MdiParent = this;
+            repForm.Show();
         }
     }
 
