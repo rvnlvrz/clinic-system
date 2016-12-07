@@ -20,7 +20,7 @@ namespace CSLabProject
         private void Main_Load(object sender, EventArgs e)
         {
             MdiClient ctlMDI;
-
+                       
             // Loop through all of the form's controls looking
             // for the control of type MdiClient.
             foreach (Control ctl in this.Controls)
@@ -53,9 +53,10 @@ namespace CSLabProject
             //m.MdiParent = this;
             //m.Show();
 
-            //frmReportForm myReport = new frmReportForm();
-            //myReport.MdiParent = this;
-            //myReport.Show();
+            frmReportForm myReport = new frmReportForm();
+            myReport.MdiParent = this;
+            myReport.Show();
+
         }
 
         private void windowsToolStripMenuItem_Click(object sender, EventArgs e)
