@@ -23,7 +23,8 @@ namespace CSLabProject
             globals.directory = directory;
             globals.currentDirectory = directory + @"\Raw Program Data\";
             STUD_radioButtonMale.Select();
-
+            
+            
             // added for default name
             globals.defName = this.Text;
 
@@ -57,7 +58,8 @@ namespace CSLabProject
         private void STUD_textBoxFirstName_KeyPress(object sender, KeyPressEventArgs e)
         {
             //The user cannot input the characters sepecified below.
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|0-9]"))
+            var regex = new Regex(@"[^a-zA-Z\s\b]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -70,7 +72,8 @@ namespace CSLabProject
         private void STUD_textBoxFLastName_KeyPress(object sender, KeyPressEventArgs e)
         {
             //The user cannot input the characters sepecified below.
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|0-9]"))
+            var regex = new Regex(@"[^a-zA-Z\s\b]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -83,7 +86,8 @@ namespace CSLabProject
         private void STUD_textBoxMI_KeyPress(object sender, KeyPressEventArgs e)
         {
             //The user cannot input the characters sepecified below.
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|0-9]"))
+            var regex = new Regex(@"[^a-zA-Z\s\b]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -100,15 +104,12 @@ namespace CSLabProject
 
         private void STUD_textBoxMobileNum_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|a-zA-Z]"))
+            var regex = new Regex(@"[^0-9\b\s]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (e.KeyChar == 8)
-            {
-                e.Handled = false;
-            }
-            else if (STUD_textBoxMobileNum.Text.Length == 11)
+            else if (STUD_textBoxMobileNum.Text.Length == 11 && e.KeyChar != 8 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -120,15 +121,12 @@ namespace CSLabProject
 
         private void STUD_textBoxLandLine_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|a-zA-Z+[$]"))
+            var regex = new Regex(@"[^0-9\b\s]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (e.KeyChar == 8)
-            {
-                e.Handled = false;
-            }
-            else if (STUD_textBoxLandLine.Text.Length == 7)
+            else if (STUD_textBoxLandLine.Text.Length == 7 && e.KeyChar != 8 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -141,15 +139,12 @@ namespace CSLabProject
 
         private void STUD_textBoxAge_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|a-zA-Z+[$]"))
+            var regex = new Regex(@"[^0-9\b\s]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (e.KeyChar == 8)
-            {
-                e.Handled = false;
-            }
-            else if (STUD_textBoxAge.Text.Length == 2)
+            else if (STUD_textBoxAge.Text.Length == 2 && e.KeyChar != 8 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -161,15 +156,12 @@ namespace CSLabProject
 
         private void STUD_textBoxYrLvl_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|a-zA-Z+[$]"))
+            var regex = new Regex(@"[^0-9\b\s]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (e.KeyChar == 8)
-            {
-                e.Handled = false;
-            }
-            else if (STUD_textBoxYrLvl.Text.Length == 1)
+            else if (STUD_textBoxYrLvl.Text.Length == 1 && e.KeyChar != 8 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -181,15 +173,12 @@ namespace CSLabProject
 
         private void STUD_textBoxStudentNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|a-zA-Z+[$]"))
+            var regex = new Regex(@"[^0-9\b\s]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (e.KeyChar == 8)
-            {
-                e.Handled = false;
-            }
-            else if (STUD_textBoxStudentNumber.Text.Length == 10)
+            else if (STUD_textBoxStudentNumber.Text.Length == 10 && e.KeyChar != 8 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -327,7 +316,8 @@ namespace CSLabProject
         private void GRDN_textBoxFirstName_KeyPress(object sender, KeyPressEventArgs e)
         {
             //The user cannot input the characters sepecified below.
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|0-9]"))
+            var regex = new Regex(@"[^a-zA-Z\s\b]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -340,7 +330,8 @@ namespace CSLabProject
         private void GRDN_textBoxLastName_KeyPress(object sender, KeyPressEventArgs e)
         {
             //The user cannot input the characters sepecified below.
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|0-9]"))
+            var regex = new Regex(@"[^a-zA-Z\s\b]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -352,15 +343,12 @@ namespace CSLabProject
 
         private void GRDN_textBoxMI_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|0-9]"))
+            var regex = new Regex(@"[^a-zA-Z\s\b]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (e.KeyChar == 8)
-            {
-                e.Handled = false;
-            }
-            else if (GRDN_textBoxMI.Text.Length == 1)
+            else if (GRDN_textBoxMI.Text.Length == 1 && e.KeyChar != 8 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -372,15 +360,12 @@ namespace CSLabProject
 
         private void GRDN_textBoxMobileNum_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|a-zA-Z+$]"))
+            var regex = new Regex(@"[^0-9\b\s]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (e.KeyChar == 8)
-            {
-                e.Handled = false;
-            }
-            else if (GRDN_textBoxMobileNum.Text.Length == 11)
+            else if (GRDN_textBoxMobileNum.Text.Length == 11 && e.KeyChar != 8 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -392,15 +377,12 @@ namespace CSLabProject
 
         private void GRDN_textBoxLandLine_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|a-zA-Z+$]"))
+            var regex = new Regex(@"[^0-9\b\s]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (e.KeyChar == 8)
-            {
-                e.Handled = false;
-            }
-            else if (GRDN_textBoxLandLine.Text.Length == 7)
+            else if (GRDN_textBoxLandLine.Text.Length == 7 && e.KeyChar != 8 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -725,6 +707,7 @@ namespace CSLabProject
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
+            Name studentName;
             bool confirmAllAreValid = validateInput();
             bool confirmNoneAreNull = checkForNullStrings();
 
