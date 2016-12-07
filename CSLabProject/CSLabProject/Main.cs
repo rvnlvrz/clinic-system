@@ -42,11 +42,23 @@ namespace CSLabProject
             }
 
             // display intial forms
+<<<<<<< HEAD
             StudentDetails m = new StudentDetails();
             m.MdiParent = this;
             GlobalVar.frmCtrSD++;
             m.Text += " " + GlobalVar.frmCtrSD.ToString();
             m.Show();
+=======
+            //frmStudentDetails m = new frmStudentDetails();
+            //m.MdiParent = this;
+            //m.Show();
+
+            frmReportForm myReport = new frmReportForm();
+            myReport.MdiParent = this;
+            myReport.Show();
+
+            
+>>>>>>> refs/remotes/origin/master
         }
 
         private void windowsToolStripMenuItem_Click(object sender, EventArgs e)
