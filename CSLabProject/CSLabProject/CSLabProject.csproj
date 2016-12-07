@@ -55,13 +55,14 @@
     <Compile Include="AddToInventoryDialog.Designer.cs">
       <DependentUpon>AddToInventoryDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Character Model.cs" />
     <Compile Include="Inventory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inventory.designer.cs">
       <DependentUpon>Inventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginCheck.cs" />
+    <Compile Include="Encryption.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +117,7 @@
     <EmbeddedResource Include="StudentDetails.resx">
       <DependentUpon>StudentDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
