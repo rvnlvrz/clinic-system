@@ -50,14 +50,11 @@
             this.EditTT = new System.Windows.Forms.ToolTip(this.components);
             this.SearchTT = new System.Windows.Forms.ToolTip(this.components);
             this.commenceSearch_btn = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_Confirm = new System.Windows.Forms.Button();
             this.BTNclose = new System.Windows.Forms.Button();
             this.searchKey_txtbox = new System.Windows.Forms.TextBox();
             this.grpbxInventoryTools.SuspendLayout();
             this.grpbxUserDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userAvatar)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // inventoryGrid
@@ -175,7 +172,7 @@
             this.UserName.AutoSize = true;
             this.UserName.Location = new System.Drawing.Point(10, 26);
             this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(152, 13);
+            this.UserName.Size = new System.Drawing.Size(206, 21);
             this.UserName.TabIndex = 8;
             this.UserName.Text = "This is where the name goes";
             // 
@@ -184,7 +181,7 @@
             this.userPosition.AutoSize = true;
             this.userPosition.Location = new System.Drawing.Point(12, 49);
             this.userPosition.Name = "userPosition";
-            this.userPosition.Size = new System.Drawing.Size(76, 13);
+            this.userPosition.Size = new System.Drawing.Size(105, 21);
             this.userPosition.TabIndex = 9;
             this.userPosition.Text = "Nurse/Doctor";
             // 
@@ -228,7 +225,7 @@
             // commenceSearch_btn
             // 
             this.commenceSearch_btn.Image = global::CSLabProject.Properties.Resources.ic_search_black_18dp_1x;
-            this.commenceSearch_btn.Location = new System.Drawing.Point(806, 35);
+            this.commenceSearch_btn.Location = new System.Drawing.Point(775, 35);
             this.commenceSearch_btn.Name = "commenceSearch_btn";
             this.commenceSearch_btn.Size = new System.Drawing.Size(42, 38);
             this.commenceSearch_btn.TabIndex = 8;
@@ -236,43 +233,23 @@
             this.commenceSearch_btn.UseVisualStyleBackColor = true;
             this.commenceSearch_btn.Click += new System.EventHandler(this.commenceSearch_btn_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btn_Confirm);
-            this.groupBox1.Controls.Add(this.BTNclose);
-            this.groupBox1.Location = new System.Drawing.Point(238, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(142, 74);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Window Options";
-            // 
-            // btn_Confirm
-            // 
-            this.btn_Confirm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Confirm.Image = global::CSLabProject.Properties.Resources.ic_check_black_18dp_1x;
-            this.btn_Confirm.Location = new System.Drawing.Point(71, 23);
-            this.btn_Confirm.Name = "btn_Confirm";
-            this.btn_Confirm.Size = new System.Drawing.Size(43, 38);
-            this.btn_Confirm.TabIndex = 8;
-            this.btn_Confirm.UseVisualStyleBackColor = false;
-            // 
             // BTNclose
             // 
             this.BTNclose.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BTNclose.Image = global::CSLabProject.Properties.Resources.ic_close_black_18dp_1x;
-            this.BTNclose.Location = new System.Drawing.Point(22, 23);
+            this.BTNclose.Image = global::CSLabProject.Properties.Resources.ic_check_black_18dp_1x;
+            this.BTNclose.Location = new System.Drawing.Point(819, 35);
             this.BTNclose.Name = "BTNclose";
             this.BTNclose.Size = new System.Drawing.Size(43, 38);
             this.BTNclose.TabIndex = 7;
+            this.SearchTT.SetToolTip(this.BTNclose, "Finished Searching");
             this.BTNclose.UseVisualStyleBackColor = false;
             this.BTNclose.Click += new System.EventHandler(this.BTNclose_Click);
             // 
             // searchKey_txtbox
             // 
-            this.searchKey_txtbox.Location = new System.Drawing.Point(478, 42);
+            this.searchKey_txtbox.Location = new System.Drawing.Point(447, 42);
             this.searchKey_txtbox.Name = "searchKey_txtbox";
-            this.searchKey_txtbox.Size = new System.Drawing.Size(322, 20);
+            this.searchKey_txtbox.Size = new System.Drawing.Size(322, 26);
             this.searchKey_txtbox.TabIndex = 9;
             this.searchKey_txtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchKey_txtbox_KeyPress);
             this.searchKey_txtbox.Leave += new System.EventHandler(this.searchKey_txtbox_Leave);
@@ -284,8 +261,8 @@
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1276, 608);
             this.Controls.Add(this.commenceSearch_btn);
+            this.Controls.Add(this.BTNclose);
             this.Controls.Add(this.searchKey_txtbox);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpbxUserDetails);
             this.Controls.Add(this.grpbxInventoryTools);
             this.Controls.Add(this.inventoryGrid);
@@ -299,7 +276,6 @@
             this.grpbxUserDetails.ResumeLayout(false);
             this.grpbxUserDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userAvatar)).EndInit();
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,8 +302,6 @@
         private System.Windows.Forms.ToolTip EditTT;
         private System.Windows.Forms.ToolTip SearchTT;
         private System.Windows.Forms.Button BTNclose;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_Confirm;
         private System.Windows.Forms.ColumnHeader unitHeader;
         private System.Windows.Forms.TextBox searchKey_txtbox;
         private System.Windows.Forms.Button commenceSearch_btn;

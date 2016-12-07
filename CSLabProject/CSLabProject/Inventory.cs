@@ -26,26 +26,41 @@ namespace CSLabProject
             public static int flag = 0;
             public static string[] listViewItems = new string[] { };
             public static int counter = 0;
+            
         }
         private void Inventory_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
             searchKey_txtbox.Visible = false;
             commenceSearch_btn.Visible = false;
-            frmStudentDetails.globals.currentDirectoryCopy = frmStudentDetails.globals.directory + @"\Inventory Data\";
-
+            BTNclose.Visible = false;
+            frmStudentDetails.globals.currentDirectoryCopy = frmStudentDetails.globals.directory + @"\Raw Inventory Data\";
+            DirectoryInfo dir = new System.IO.DirectoryInfo(frmStudentDetails.globals.currentDirectoryCopy);
+            if (dir.Exists)
+            {
+                dir.Delete(true);
+            }
+            if (!dir.Exists)
+            {
+                BTNdsearchItem.Enabled = false;
+            }
+            File.Delete(frmStudentDetails.globals.currentDirectoryCopy);
+            
         }
 
         private void BTNcreateNew_Click(object sender, EventArgs e)
         {
             AddToInventoryDialog addToInventoryDialog = new AddToInventoryDialog();
             addToInventoryDialog.ShowDialog();
+            string temp = string.Empty;
             string[] dataElements = new string[] { globals.itemQuantity, globals.medType, globals.currentDate, globals.addedAs, globals.position };
             if (globals.flag == 1)
             {
                 Directory.CreateDirectory(frmStudentDetails.globals.currentDirectoryCopy);
-                File.AppendAllText(frmStudentDetails.globals.currentDirectoryCopy + "ItemNames.txt", globals.itemName + Environment.NewLine);
-                File.AppendAllLines(frmStudentDetails.globals.currentDirectoryCopy + "SubItems.txt", dataElements);
+                temp = globals.itemName;
+                File.AppendAllText(frmStudentDetails.globals.currentDirectoryCopy + "temp.txt", temp + Environment.NewLine);
+                File.AppendAllText(frmStudentDetails.globals.currentDirectoryCopy + globals.itemName + ".txt", globals.itemName + Environment.NewLine);
+                File.AppendAllLines(frmStudentDetails.globals.currentDirectoryCopy + globals.itemName + "Sub.txt", dataElements);
                 inventoryGrid.Items.Add(globals.itemName).SubItems.AddRange(dataElements);
             }
         }
@@ -53,13 +68,23 @@ namespace CSLabProject
 
         private void BTNclose_Click(object sender, EventArgs e)
         {
-            Dispose();
+            string[] itemName = File.ReadAllLines(frmStudentDetails.globals.currentDirectoryCopy + "temp.txt");
+            searchKey_txtbox.Text = string.Empty;
+            searchKey_txtbox.Visible = false;
+            commenceSearch_btn.Visible = false;
+            BTNclose.Visible = false;
+            foreach(string item in itemName)
+            {
+                string[] subItems = File.ReadAllLines(frmStudentDetails.globals.currentDirectoryCopy + item + "Sub.txt");
+                inventoryGrid.Items.Add(item).SubItems.AddRange(subItems);
+            }
         }
 
         private void BTNdsearchItem_Click(object sender, EventArgs e)
         {
             searchKey_txtbox.Visible = true;
             commenceSearch_btn.Visible = true;
+            BTNclose.Visible = true;
             searchKey_txtbox.Select();
         }
 
