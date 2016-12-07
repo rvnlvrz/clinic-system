@@ -42,15 +42,23 @@ namespace CSLabProject
             }
 
             // display intial forms
+
             frmStudentDetails m = new frmStudentDetails();
             m.MdiParent = this;
+            GlobalVar.frmCtrSD++;
+            m.Text += " " + GlobalVar.frmCtrSD.ToString();
             m.Show();
+
+            //frmStudentDetails m = new frmStudentDetails();
+            //m.MdiParent = this;
+            //m.Show();
 
             frmReportForm myReport = new frmReportForm();
             myReport.MdiParent = this;
             myReport.Show();
 
             
+
         }
 
         private void windowsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -98,7 +106,9 @@ namespace CSLabProject
 
         private void inventoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmInventory invForm = new frmInventory();
+            invForm.MdiParent = this;
+            invForm.Show();
         }
 
         private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
