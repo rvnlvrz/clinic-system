@@ -32,6 +32,8 @@ namespace CSLabProject
             WindowState = FormWindowState.Maximized;
             searchKey_txtbox.Visible = false;
             commenceSearch_btn.Visible = false;
+            frmStudentDetails.globals.currentDirectoryCopy = frmStudentDetails.globals.directory + @"\Inventory Data\";
+
         }
 
         private void BTNcreateNew_Click(object sender, EventArgs e)

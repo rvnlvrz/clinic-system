@@ -20,8 +20,8 @@ namespace CSLabProject
             comboBoxRelationship.SelectedIndex = 1;
             string direc = AppDomain.CurrentDomain.BaseDirectory;
             string directory = direc.Replace(@"\bin\Debug\", "");
+            globals.directory = directory;
             globals.currentDirectory = directory + @"\Raw Program Data\";
-            globals.currentDirectoryCopy = directory + @"\Inventory Data\";
             STUD_radioButtonMale.Select();
 
             // added for default name
@@ -35,6 +35,7 @@ namespace CSLabProject
         {
             public static string currentDirectory = ""; /*Helps the program identify where to store obtained data.*/
             public static string currentDirectoryCopy = ""; /*Helps the program identify where to store obtained data.*/
+            public static string directory = string.Empty;
             public static int flag = 0;
             public static bool formElement1 = false;
             public static bool formElement2 = false;
