@@ -1,11 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -29,6 +23,12 @@ namespace CSLabProject
             globals.currentDirectory = directory + @"\Raw Program Data\";
             globals.currentDirectoryCopy = directory + @"\Inventory Data\";
             STUD_radioButtonMale.Select();
+
+            // added for default name
+            globals.defName = this.Text;
+
+            // set default focus
+            STUD_textBoxFirstName.Focus();
         }
 
         public class globals
@@ -51,6 +51,7 @@ namespace CSLabProject
             public static bool formElement12 = false;
             public static bool formElement13 = false;
             public static bool formElement14 = false;
+            public static string defName = "";
         }
         private void STUD_textBoxFirstName_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -61,10 +62,9 @@ namespace CSLabProject
             }
             else if (STUD_textBoxFirstName.Text != string.Empty)
             {
-                LabelStudentFirstName.ForeColor = Color.Black;
-
+                STUD_textBoxFirstName.ForeColor = Color.Black;
             }
-        }
+        }       
 
         private void STUD_textBoxFLastName_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -107,7 +107,7 @@ namespace CSLabProject
             {
                 e.Handled = false;
             }
-            else if(STUD_textBoxMobileNum.Text.Length == 11)
+            else if (STUD_textBoxMobileNum.Text.Length == 11)
             {
                 e.Handled = true;
             }
@@ -379,7 +379,7 @@ namespace CSLabProject
             {
                 e.Handled = false;
             }
-            else if(GRDN_textBoxMobileNum.Text.Length == 11)
+            else if (GRDN_textBoxMobileNum.Text.Length == 11)
             {
                 e.Handled = true;
             }
@@ -399,7 +399,7 @@ namespace CSLabProject
             {
                 e.Handled = false;
             }
-            else if(GRDN_textBoxLandLine.Text.Length == 7)
+            else if (GRDN_textBoxLandLine.Text.Length == 7)
             {
                 e.Handled = true;
             }
@@ -437,7 +437,8 @@ namespace CSLabProject
                     c.ForeColor = Color.Black;
             }
 
-
+            // sets focus to the default tbx
+            STUD_textBoxFirstName.Focus();
         }
 
         private void GRDN_textBoxFirstName_Leave(object sender, EventArgs e)
@@ -502,10 +503,10 @@ namespace CSLabProject
 
         public bool checkForNullStrings()
         {
-            if(STUD_textBoxFirstName.Text != string.Empty && STUD_textBoxLastName.Text != string.Empty 
-                && STUD_textBoxMI.Text != string.Empty && STUD_textBoxLandLine.Text != string.Empty 
-                && STUD_textBoxMobileNum.Text != string.Empty && GRDN_textBoxFirstName.Text != string.Empty 
-                && GRDN_textBoxLastName.Text != string.Empty && GRDN_textBoxMI.Text != string.Empty 
+            if (STUD_textBoxFirstName.Text != string.Empty && STUD_textBoxLastName.Text != string.Empty
+                && STUD_textBoxMI.Text != string.Empty && STUD_textBoxLandLine.Text != string.Empty
+                && STUD_textBoxMobileNum.Text != string.Empty && GRDN_textBoxFirstName.Text != string.Empty
+                && GRDN_textBoxLastName.Text != string.Empty && GRDN_textBoxMI.Text != string.Empty
                 && GRDN_textBoxLandLine.Text != string.Empty && GRDN_textBoxMobileNum.Text != string.Empty && STUD_radioButtonMale.Checked || STUD_radioButtonFemale.Checked)
             {
                 return true;
@@ -521,7 +522,7 @@ namespace CSLabProject
         {
             //Post-input validation for student related fields.
             if (STUD_textBoxFirstName.Text.Length <= 1)
-            {
+            {                
                 LabelStudentFirstName.ForeColor = Color.Red;
                 warning_label.Text = "An inputted value appears to be invalid.";
                 globals.formElement1 = false;
@@ -533,7 +534,7 @@ namespace CSLabProject
                 globals.formElement1 = true;
             }
 
-            if(STUD_textBoxLastName.Text.Length <= 1)
+            if (STUD_textBoxLastName.Text.Length <= 1)
             {
                 LabelStudentLastName.ForeColor = Color.Red;
                 warning_label.Text = "An inputted value appears to be invalid.";
@@ -543,7 +544,7 @@ namespace CSLabProject
             {
                 LabelStudentLastName.ForeColor = Color.Black;
                 warning_label.Text = string.Empty;
-                globals.formElement2 = true; 
+                globals.formElement2 = true;
             }
 
             if (STUD_textBoxMI.Text == string.Empty)
@@ -627,9 +628,9 @@ namespace CSLabProject
                 globals.formElement8 = true;
             }
 
-            if(STUD_textBoxLandLine.Text.Length < 7)
+            if (STUD_textBoxLandLine.Text.Length < 7)
             {
-                LabelStudentLandLineNumber .ForeColor = Color.Red;
+                LabelStudentLandLineNumber.ForeColor = Color.Red;
                 warning_label.Text = "An inputted value appears to be invalid.";
                 globals.formElement9 = false;
             }
@@ -707,7 +708,7 @@ namespace CSLabProject
                 globals.formElement14 = true;
             }
 
-            if(globals.formElement1 && globals.formElement2 && globals.formElement5 && globals.formElement6 && globals.formElement7 && globals.formElement8 &&
+            if (globals.formElement1 && globals.formElement2 && globals.formElement5 && globals.formElement6 && globals.formElement7 && globals.formElement8 &&
                 globals.formElement9 && globals.formElement10 && globals.formElement11 &&
                 globals.formElement12 && globals.formElement13 && globals.formElement14)
             {
@@ -719,16 +720,16 @@ namespace CSLabProject
             }
 
         }
-        
+
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
             bool confirmAllAreValid = validateInput();
             bool confirmNoneAreNull = checkForNullStrings();
-           
+
             if (confirmNoneAreNull && confirmAllAreValid)
             {
-                STUD_textBoxMI.Text = STUD_textBoxMI.Text.ToUpper() +  ".";
+                STUD_textBoxMI.Text = STUD_textBoxMI.Text.ToUpper() + ".";
                 GRDN_textBoxMI.Text = GRDN_textBoxMI.Text.ToUpper() + ".";
                 globals.currentDirectory += @"\" + STUD_textBoxStudentNumber.Text + @"\";
                 Directory.CreateDirectory(globals.currentDirectory);
@@ -743,7 +744,7 @@ namespace CSLabProject
                 File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxLandLine.Text + Environment.NewLine);
 
                 File.WriteAllText(globals.currentDirectory + "GuardianData.txt", comboBoxRelationship.SelectedItem + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory +"GuardianData.txt", GRDN_textBoxFirstName.Text + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", GRDN_textBoxFirstName.Text + Environment.NewLine);
                 File.AppendAllText(globals.currentDirectory + "GuardianData.txt", GRDN_textBoxLastName.Text + Environment.NewLine);
                 File.AppendAllText(globals.currentDirectory + "GuardianData.txt", GRDN_textBoxMobileNum.Text + Environment.NewLine);
                 File.AppendAllText(globals.currentDirectory + "GuardianData.txt", GRDN_textBoxMobileNum.Text + Environment.NewLine);
@@ -840,6 +841,17 @@ namespace CSLabProject
         private void buttonCNCL_Click(object sender, EventArgs e)
         {
             Dispose();
+        }
+
+        private void STUD_textBoxLastName_TextChanged(object sender, EventArgs e)
+        {
+
+            if (STUD_textBoxLastName.Text == "")
+            {
+                this.Text = globals.defName;
+            }
+            else
+                this.Text = "Student Details -" + " " + STUD_textBoxLastName.Text;
         }
     }
 }
