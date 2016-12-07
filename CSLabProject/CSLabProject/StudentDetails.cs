@@ -1,40 +1,42 @@
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
 
 namespace CSLabProject
 {
-    public partial class StudentDetails : Form
+    public partial class frmStudentDetails : Form
     {
-        public StudentDetails()
+        public frmStudentDetails()
         {
             InitializeComponent();
         }
 
         private void StudentDetails_Load(object sender, EventArgs e)
-        {
-            MinimizeBox = false;
-            MaximizeBox = false;
+        {   
+            //Do not allow the user to leave a textbox empty.
             comboBoxRelationship.SelectedIndex = 1;
             string direc = AppDomain.CurrentDomain.BaseDirectory;
             string directory = direc.Replace(@"\bin\Debug\", "");
             globals.currentDirectory = directory + @"\Raw Program Data\";
-            globals.currentDirectoryCopy = directory + @"\Inventory Data\";
             STUD_radioButtonMale.Select();
+            //foreach (TextBox tb in student_grpbx.Controls.OfType<TextBox>().Where(x => x.CausesValidation == true))
+            //{
+            //    tb.Validating += textBox_Validating;
+            //}
+            //foreach (TextBox tb in guradian_grpbx.Controls.OfType<TextBox>().Where(x => x.CausesValidation == true))
+            //{
+            //    tb.Validating += textBox_Validating;
+            //}
+            GlobalVar.frmCtrSD++;
+            this.Text += " " + GlobalVar.frmCtrSD.ToString();
         }
 
         public class globals
         {
             public static string currentDirectory = ""; /*Helps the program identify where to store obtained data.*/
-            public static string currentDirectoryCopy = ""; /*Helps the program identify where to store obtained data.*/
             public static int flag = 0;
             public static bool formElement1 = false;
             public static bool formElement2 = false;
@@ -52,6 +54,21 @@ namespace CSLabProject
             public static bool formElement13 = false;
             public static bool formElement14 = false;
         }
+
+        private void textBox_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox currenttb = (TextBox)sender;
+            if (currenttb.Text == "")
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+                warning_label.Text = string.Empty;
+            }
+        }
+
         private void STUD_textBoxFirstName_KeyPress(object sender, KeyPressEventArgs e)
         {
             //The user cannot input the characters sepecified below.
@@ -836,10 +853,6 @@ namespace CSLabProject
         {
             LabelStudentGender.ForeColor = Color.Black;
         }
-
-        private void buttonCNCL_Click(object sender, EventArgs e)
-        {
-            Dispose();
-        }
     }
 }
+
