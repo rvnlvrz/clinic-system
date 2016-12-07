@@ -22,11 +22,11 @@ namespace CSLabProject
             //string myHashCode = Encrypt.EncryptString(tbxUser.Text, tbxPass.Text);
             //File.WriteAllText("test.txt", myHashCode);
 
-            string[] defCode = new string[] {"UJifg1yjRhG9l4RoYkZm+w=="};
+            string defCode = "UJifg1yjRhG9l4RoYkZm+w==";
 
             if (!File.Exists(@"accts.txt"))
             {
-                File.WriteAllLines(@"accts.txt", defCode);
+                File.WriteAllText(@"accts.txt", defCode);
             }
 
             // check login
@@ -36,17 +36,32 @@ namespace CSLabProject
             
             for (int x = 0; x < definedCipher.Length; x++)
             {
-                if (string.Compare(userCipher, definedCipher[x]) == 0)
+                if (string.Compare(userCipher, definedCipher[0]) == 0)
                 {
-                    MessageBox.Show("Access granted as [ADMIN]", "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Access granted as admin.", "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    //frmMain mainForm = new frmMain();
-                    //GlobalVar.frmCtrSD = 0;
-                    //this.Hide();
-                    //mainForm.ShowDialog();
-                    //this.Show();
+                    GlobalVar.accessUser = tbxUser.Text;
 
                     administratorPanel mainForm = new administratorPanel();
+                    GlobalVar.frmCtrSD = 0;
+                    this.Hide();
+                    mainForm.ShowDialog();
+                    this.Show();
+
+                    foreach (Control ctrl in activeForm.Controls)
+                    {
+                        if (ctrl is TextBox)
+                            ctrl.ResetText();
+                    }
+                    return;
+                }
+                if (string.Compare(userCipher, definedCipher[x]) == 0)
+                {
+                    MessageBox.Show("Access granted as a user.", "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    GlobalVar.accessUser = tbxUser.Text;
+
+                    frmMain mainForm = new frmMain();
                     GlobalVar.frmCtrSD = 0;
                     this.Hide();
                     mainForm.ShowDialog();

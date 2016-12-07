@@ -238,6 +238,7 @@
         /// <param name="gender"></param>
         /// <param name="num"></param>
         /// <param name="pos"></param>
+
         public Employee(Name name, int age, double wght, Height ht, string gender, string num, string pos)
             : base(name, age, wght, ht, gender)
         {
