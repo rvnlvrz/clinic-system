@@ -35,12 +35,12 @@ namespace CSLabProject
         {
             if (AddingAs_txtbx.Text != string.Empty && Position_txtbx.Text != string.Empty && quantity_txtbx.Text != string.Empty && ItemName_txtbx.Text != string.Empty && currentDate_txtbx.Text != string.Empty)
             {
-                Inventory.globals.addedAs = AddingAs_txtbx.Text;
-                Inventory.globals.position = Position_txtbx.Text;
-                Inventory.globals.currentDate = currentDate_txtbx.Text;
-                Inventory.globals.itemName = ItemName_txtbx.Text;
-                Inventory.globals.itemQuantity = quantity_txtbx.Text;
-                Inventory.globals.medType = comboBoxMedicineType.SelectedItem.ToString();
+                frmInventory.globals.addedAs = AddingAs_txtbx.Text;
+                frmInventory.globals.position = Position_txtbx.Text;
+                frmInventory.globals.currentDate = currentDate_txtbx.Text;
+                frmInventory.globals.itemName = ItemName_txtbx.Text;
+                frmInventory.globals.itemQuantity = quantity_txtbx.Text;
+                frmInventory.globals.medType = comboBoxMedicineType.SelectedItem.ToString();
             }
         }
 
@@ -49,25 +49,25 @@ namespace CSLabProject
             if(ItemName_txtbx.Text == string.Empty)
             {
                 itemName_lbl.ForeColor = Color.Yellow;
-                Inventory.globals.flag = 0;
+                frmInventory.globals.flag = 0;
                 return false;
             }
             else if(ItemName_txtbx.Text != string.Empty)
             {
                 itemName_lbl.ForeColor = Color.White;
-                Inventory.globals.flag = 1;
+                frmInventory.globals.flag = 1;
             }
 
             if (quantity_txtbx.Text == string.Empty)
             {
                 quantity_lbl.ForeColor = Color.Yellow;
-                Inventory.globals.flag = 0;
+                frmInventory.globals.flag = 0;
             }
 
             else if(quantity_txtbx.Text != string.Empty)
             {
                 quantity_lbl.ForeColor = Color.White;
-                Inventory.globals.flag = 1;
+                frmInventory.globals.flag = 1;
                 return true;
             }
 
@@ -75,16 +75,16 @@ namespace CSLabProject
             {
                 quantity_lbl.ForeColor = Color.Yellow;
                 itemName_lbl.ForeColor = Color.Yellow;
-                Inventory.globals.flag = 0;
+                frmInventory.globals.flag = 0;
             }
             else if(quantity_txtbx.Text != string.Empty && ItemName_txtbx.Text != string.Empty)
             {
                 quantity_lbl.ForeColor = Color.White;
                 itemName_lbl.ForeColor = Color.White;
-                Inventory.globals.flag = 1;
+                frmInventory.globals.flag = 1;
             }
 
-            if (Inventory.globals.flag == 1)
+            if (frmInventory.globals.flag == 1)
             {
                 return true;
             }

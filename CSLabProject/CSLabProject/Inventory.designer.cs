@@ -1,6 +1,6 @@
 ﻿namespace CSLabProject
 {
-    partial class Inventory
+    partial class frmInventory
     {
         /// <summary>
         /// Required designer variable.
@@ -175,7 +175,7 @@
             this.UserName.AutoSize = true;
             this.UserName.Location = new System.Drawing.Point(10, 26);
             this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(206, 21);
+            this.UserName.Size = new System.Drawing.Size(152, 13);
             this.UserName.TabIndex = 8;
             this.UserName.Text = "This is where the name goes";
             // 
@@ -184,7 +184,7 @@
             this.userPosition.AutoSize = true;
             this.userPosition.Location = new System.Drawing.Point(12, 49);
             this.userPosition.Name = "userPosition";
-            this.userPosition.Size = new System.Drawing.Size(105, 21);
+            this.userPosition.Size = new System.Drawing.Size(76, 13);
             this.userPosition.TabIndex = 9;
             this.userPosition.Text = "Nurse/Doctor";
             // 
@@ -272,12 +272,12 @@
             // 
             this.searchKey_txtbox.Location = new System.Drawing.Point(478, 42);
             this.searchKey_txtbox.Name = "searchKey_txtbox";
-            this.searchKey_txtbox.Size = new System.Drawing.Size(322, 26);
+            this.searchKey_txtbox.Size = new System.Drawing.Size(322, 20);
             this.searchKey_txtbox.TabIndex = 9;
             this.searchKey_txtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchKey_txtbox_KeyPress);
             this.searchKey_txtbox.Leave += new System.EventHandler(this.searchKey_txtbox_Leave);
             // 
-            // Inventory
+            // frmInventory
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
@@ -290,7 +290,7 @@
             this.Controls.Add(this.grpbxInventoryTools);
             this.Controls.Add(this.inventoryGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Inventory";
+            this.Name = "frmInventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.Inventory_Load);

@@ -11,9 +11,9 @@ using System.Text.RegularExpressions;
 
 namespace CSLabProject
 {
-    public partial class Inventory : Form
+    public partial class frmInventory : Form
     {
-        public Inventory()
+        public frmInventory()
         {
             InitializeComponent();
         }
