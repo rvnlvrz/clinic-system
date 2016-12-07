@@ -245,6 +245,7 @@
             this.Controls.Add(this.btn_database);
             this.Name = "nursePanel";
             this.Text = "nursePanel";
+            this.Load += new System.EventHandler(this.nursePanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

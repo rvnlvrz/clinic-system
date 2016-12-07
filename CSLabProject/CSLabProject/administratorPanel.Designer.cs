@@ -168,6 +168,7 @@
             this.label10.Size = new System.Drawing.Size(369, 70);
             this.label10.TabIndex = 12;
             this.label10.Text = "Administration";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
@@ -303,6 +304,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "administratorPanel";
             this.Text = "Administration";
+            this.Load += new System.EventHandler(this.administratorPanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

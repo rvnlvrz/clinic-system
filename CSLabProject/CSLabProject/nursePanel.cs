@@ -45,5 +45,10 @@ namespace CSLabProject
 
             }
         }
+
+        private void nursePanel_Load(object sender, EventArgs e)
+        {
+            ControlBox = false;
+        }
     }
 }

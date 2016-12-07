@@ -50,5 +50,15 @@ namespace CSLabProject
 
             }
         }
+
+        private void administratorPanel_Load(object sender, EventArgs e)
+        {
+            ControlBox = false;
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
