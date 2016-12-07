@@ -111,7 +111,7 @@ namespace CSLabProject
         /// <param name="cellnum">Student cell number.</param>
         /// <param name="landl">Student landline number.</param>
         /// <param name="grdn">Student guarian, uses the 'Guardian' class.</param>
-        Student(Name name, int age, double wght, Height ht, string gender, int num, string prog, int yr, int cellnum, int landl, Guardian grdn)
+        public Student(Name name, int age, double wght, Height ht, string gender, int num, string prog, int yr, int cellnum, int landl, Guardian grdn)
             : base(name, age, wght, ht, gender)
         {
             studentNumber = num;
@@ -224,7 +224,7 @@ namespace CSLabProject
         /// <param name="gender"></param>
         /// <param name="num"></param>
         /// <param name="pos"></param>
-        Employee(Name name, int age, double wght, Height ht, string gender, int num, string pos)
+        public Employee(Name name, int age, double wght, Height ht, string gender, int num, string pos)
             : base(name, age, wght, ht, gender)
         {
             employeeNumber = num;
@@ -305,7 +305,7 @@ namespace CSLabProject
         /// <param name="nm">Name of Guardian, uses 'Name' struct.</param>
         /// <param name="cell">Cellular number.</param>
         /// <param name="line">Landline number.</param>
-        Guardian(Name nm, int cell, int line)
+        public Guardian(Name nm, int cell, int line)
         {
             name = nm;
             cellNo = cell;

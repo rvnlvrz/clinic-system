@@ -20,7 +20,7 @@ namespace CSLabProject
         private void Main_Load(object sender, EventArgs e)
         {
             MdiClient ctlMDI;
-
+                       
             // Loop through all of the form's controls looking
             // for the control of type MdiClient.
             foreach (Control ctl in this.Controls)
