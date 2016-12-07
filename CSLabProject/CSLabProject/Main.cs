@@ -106,7 +106,9 @@ namespace CSLabProject
 
         private void inventoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmInventory invForm = new frmInventory();
+            invForm.MdiParent = this;
+            invForm.Show();
         }
 
         private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
