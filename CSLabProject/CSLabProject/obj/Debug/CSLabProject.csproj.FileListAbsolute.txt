@@ -23,10 +23,7 @@ E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\bin\Debug\CSLabProject.e
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.exe
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.pdb
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.csprojResolveAssemblyReference.cache
-E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.LoginForm.resources
-E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.Main.resources
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.Properties.Resources.resources
-E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.StudentDetails.resources
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.csproj.GenerateResource.Cache
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\bin\Debug\CSLabProject.exe
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\bin\Debug\CSLabProject.pdb
@@ -45,3 +42,7 @@ C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\bin\De
 C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.AddToInventoryDialog.resources
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.AddToInventoryDialog.resources
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.Inventory.resources
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.frmMain.resources
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.frmReportForm.resources
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.frmStudentDetails.resources
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.frmLogin.resources
