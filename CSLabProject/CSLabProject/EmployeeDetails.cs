@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using System.Text.RegularExpressions;
 
 namespace CSLabProject
@@ -142,6 +143,8 @@ namespace CSLabProject
         {
             EMP_radioButtonMale.Select();
             EMP_textBoxFirstName.Select();
+            globals.currentDirectory += @"\" + EMP_textBoxEmployeeNumber.Text + @"\";
+            Directory.CreateDirectory(globals.currentDirectory);
         }
 
         private void EMP_textBoxFirstName_Leave(object sender, EventArgs e)
@@ -374,6 +377,66 @@ namespace CSLabProject
             public static bool formElement6 = false;
             public static bool formElement8 = false;
             public static bool formElement9 = false;
+            public static string gender = string.Empty;
+        }
+
+        public bool checkForNullStrings()
+        {
+            if (EMP_textBoxFirstName.Text != string.Empty && EMP_textBoxLastName.Text != string.Empty
+                && EMP_textBoxMI.Text != string.Empty && EMP_textBoxLandLine.Text != string.Empty
+                && EMP_textBoxMobileNum.Text != string.Empty && EMP_radioButtonMale.Checked || EMP_radioButtonFemale.Checked)
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+
+        }
+
+        public void setGender()
+        {
+            if (EMP_radioButtonMale.Checked)
+            {
+                globals.gender = "Male";
+            }
+            else
+            {
+                globals.gender = "Female";
+            }
+        }
+
+        private void buttonConfirm_Click(object sender, EventArgs e)
+        {
+            Name employeeName = new Name(EMP_textBoxFirstName.Text, EMP_textBoxLastName.Text, EMP_textBoxMI.Text);
+            Height employeeHeight = new Height(0, 0);
+            Employee employee = new Employee(employeeName, int.Parse(EMP_textBoxAge.Text), 0, employeeHeight, globals.gender, EMP_textBoxEmployeeNumber.Text, EMP_textBoxPosition.Text);
+            Name empName = employee.GetName();
+            bool confirmAllAreValid = validateInput();
+            bool confirmNoneAreNull = checkForNullStrings();
+            if(confirmAllAreValid && confirmNoneAreNull)
+            {
+                EMP_textBoxMI.Text = EMP_textBoxMI.Text.ToUpper() + ".";
+                globals.currentDirectory += @"\" + EMP_textBoxEmployeeNumber.Text + @"\";
+                Directory.CreateDirectory(globals.currentDirectory);
+                File.WriteAllText(globals.currentDirectory + EMP_textBoxLastName.Text + ".txt", empName.FName + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + EMP_textBoxLastName.Text + ".txt", empName.FLame + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + EMP_textBoxLastName.Text + ".txt", empName.MInitial + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + EMP_textBoxLastName.Text + ".txt", employee.Age + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + EMP_textBoxLastName.Text + ".txt", employee.EmployeeNumber + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + EMP_textBoxLastName.Text + ".txt", employee.Position + Environment.NewLine);
+                //File.AppendAllText(globals.currentDirectory + EMP_textBoxLastName.Text + ".txt", employee.CellNo + Environment.NewLine);
+                //File.AppendAllText(globals.currentDirectory + EMP_textBoxLastName.Text + ".txt", employee.LandLine + Environment.NewLine);
+                MessageBox.Show("The details for " + empName.FName + " has been added to the system.");
+                Dispose();
+            }
+            else if (!confirmAllAreValid)
+            {
+                warning_label.Text = warning_label.Text = "An inputted value appears to be invalid.";
+            }
+
         }
     }
 }

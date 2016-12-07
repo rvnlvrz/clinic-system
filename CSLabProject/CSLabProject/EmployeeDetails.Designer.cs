@@ -59,7 +59,7 @@
             // 
             this.buttonCNCL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonCNCL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCNCL.Location = new System.Drawing.Point(1, 287);
+            this.buttonCNCL.Location = new System.Drawing.Point(9, 287);
             this.buttonCNCL.Name = "buttonCNCL";
             this.buttonCNCL.Size = new System.Drawing.Size(108, 32);
             this.buttonCNCL.TabIndex = 25;
@@ -71,7 +71,7 @@
             this.warning_label.AutoSize = true;
             this.warning_label.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warning_label.ForeColor = System.Drawing.Color.DarkRed;
-            this.warning_label.Location = new System.Drawing.Point(161, 274);
+            this.warning_label.Location = new System.Drawing.Point(169, 274);
             this.warning_label.Name = "warning_label";
             this.warning_label.Size = new System.Drawing.Size(14, 21);
             this.warning_label.TabIndex = 26;
@@ -81,7 +81,7 @@
             // 
             this.buttonCLR.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCLR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCLR.Location = new System.Drawing.Point(229, 287);
+            this.buttonCLR.Location = new System.Drawing.Point(237, 287);
             this.buttonCLR.Name = "buttonCLR";
             this.buttonCLR.Size = new System.Drawing.Size(156, 32);
             this.buttonCLR.TabIndex = 24;
@@ -92,12 +92,13 @@
             // 
             this.buttonConfirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.buttonConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonConfirm.Location = new System.Drawing.Point(493, 287);
+            this.buttonConfirm.Location = new System.Drawing.Point(501, 287);
             this.buttonConfirm.Name = "buttonConfirm";
             this.buttonConfirm.Size = new System.Drawing.Size(108, 32);
             this.buttonConfirm.TabIndex = 23;
             this.buttonConfirm.Text = "Confirm";
             this.buttonConfirm.UseVisualStyleBackColor = true;
+            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
             // 
             // student_grpbx
             // 
@@ -336,6 +337,7 @@
             this.Controls.Add(this.student_grpbx);
             this.Name = "EmployeeDetails";
             this.Text = "EmployeeDetails";
+            this.Load += new System.EventHandler(this.EmployeeDetails_Load);
             this.student_grpbx.ResumeLayout(false);
             this.student_grpbx.PerformLayout();
             this.ResumeLayout(false);

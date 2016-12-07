@@ -707,9 +707,14 @@ namespace CSLabProject
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
-            Name studentName;
+            Name studentName = new Name(STUD_textBoxFirstName.Text, STUD_textBoxLastName.Text, STUD_textBoxMI.Text);
+            Name guardianName = new Name(GRDN_textBoxFirstName.Text, GRDN_textBoxLastName.Text, GRDN_textBoxMI.Text);
+            Height studentHeight = new Height(0, 0);
+            Guardian studentGuardian = new Guardian(guardianName, GRDN_textBoxMobileNum.Text, GRDN_textBoxLandLine.Text);
+            Student student = new Student(studentName, int.Parse(STUD_textBoxAge.Text), 0, studentHeight, STUD_radioButtonMale.Text, STUD_textBoxStudentNumber.Text, STUD_textBoxProram.Text,int.Parse(STUD_textBoxYrLvl.Text), STUD_textBoxMobileNum.Text, STUD_textBoxLandLine.Text, studentGuardian);
             bool confirmAllAreValid = validateInput();
             bool confirmNoneAreNull = checkForNullStrings();
+            Name myName = student.GetName();
 
             if (confirmNoneAreNull && confirmAllAreValid)
             {
@@ -717,23 +722,24 @@ namespace CSLabProject
                 GRDN_textBoxMI.Text = GRDN_textBoxMI.Text.ToUpper() + ".";
                 globals.currentDirectory += @"\" + STUD_textBoxStudentNumber.Text + @"\";
                 Directory.CreateDirectory(globals.currentDirectory);
-                File.WriteAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxFirstName.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxLastName.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxMI.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxAge.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxStudentNumber.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxProram.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxYrLvl.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxMobileNum.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxLandLine.Text + Environment.NewLine);
+                File.WriteAllText(globals.currentDirectory + myName.FLame + ".txt", myName.FName+ Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + myName.FLame + ".txt", myName.FLame + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + myName.FLame + ".txt", myName.MInitial + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + myName.FLame + ".txt", student.Age + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + myName.FLame + ".txt", student.StudentNumber + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + myName.FLame + ".txt", student.Program + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + myName.FLame + ".txt", student.YearLevel + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + myName.FLame + ".txt", student.CellNo + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + myName.FLame + ".txt", student.LandLine + Environment.NewLine);
 
                 File.WriteAllText(globals.currentDirectory + "GuardianData.txt", comboBoxRelationship.SelectedItem + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", GRDN_textBoxFirstName.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", GRDN_textBoxLastName.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", GRDN_textBoxMobileNum.Text + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", studentGuardian.Name.FName + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", studentGuardian.Name.FLame + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", studentGuardian.Name.MInitial + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", studentGuardian.LandLine + Environment.NewLine);
                 File.AppendAllText(globals.currentDirectory + "GuardianData.txt", GRDN_textBoxMobileNum.Text + Environment.NewLine);
 
-                MessageBox.Show("The details for " + STUD_textBoxLastName.Text + " has been added to the system.");
+                MessageBox.Show("The details for " + myName.FLame + " has been added to the system.");
                 Dispose();
             }
             else if (!confirmAllAreValid)

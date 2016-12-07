@@ -55,6 +55,12 @@
     <Compile Include="AddToInventoryDialog.Designer.cs">
       <DependentUpon>AddToInventoryDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="administratorPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="administratorPanel.Designer.cs">
+      <DependentUpon>administratorPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Character Model.cs" />
     <Compile Include="EmployeeDetails.cs">
       <SubType>Form</SubType>
@@ -81,6 +87,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="nursePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nursePanel.Designer.cs">
+      <DependentUpon>nursePanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportForm.cs">
@@ -98,6 +110,9 @@
     <EmbeddedResource Include="AddToInventoryDialog.resx">
       <DependentUpon>AddToInventoryDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="administratorPanel.resx">
+      <DependentUpon>administratorPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeDetails.resx">
       <DependentUpon>EmployeeDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nursePanel.resx">
+      <DependentUpon>nursePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -166,6 +184,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MIT.ico" />
+    <None Include="Resources\ic_exit_to_app_white_36dp_2x.png" />
+    <None Include="Resources\ic_face_white_36dp_2x.png" />
+    <None Include="Resources\ic_view_list_white_36dp_2x.png" />
+    <None Include="Resources\ic_person_pin_white_36dp_2x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
