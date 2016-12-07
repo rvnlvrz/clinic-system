@@ -42,6 +42,13 @@ namespace CSLabProject
             }
 
             // display intial forms
+
+            frmStudentDetails m = new frmStudentDetails();
+            m.MdiParent = this;
+            GlobalVar.frmCtrSD++;
+            m.Text += " " + GlobalVar.frmCtrSD.ToString();
+            m.Show();
+
             //frmStudentDetails m = new frmStudentDetails();
             //m.MdiParent = this;
             //m.Show();
@@ -51,6 +58,7 @@ namespace CSLabProject
             myReport.Show();
 
             
+
         }
 
         private void windowsToolStripMenuItem_Click(object sender, EventArgs e)
