@@ -1,5 +1,4 @@
-﻿
-namespace CSLabProject
+﻿namespace CSLabProject
 {
     public struct Name
     {
@@ -12,6 +11,22 @@ namespace CSLabProject
             fName = f;
             lName = l;
             mInitial = init;
+        }
+
+        public string FName
+        {
+            get { return fName; }
+            set { fName = value; }
+        }
+        public string FLame
+        {
+            get { return lName; }
+            set { lName = value; }
+        }
+        public string MInitial
+        {
+            get { return mInitial; }
+            set { mInitial = value; }
         }
     }
 
@@ -57,7 +72,7 @@ namespace CSLabProject
         public Name Name
         {
             get { return name; }
-            set { Name = value; }
+            set { name = value; }
         }
 
         public int Age
@@ -90,12 +105,12 @@ namespace CSLabProject
     /// </summary>
     public class Student : Person
     {
-        private int studentNumber;
+        private string studentNumber;
         private string program;
         private int yearLevel;
         private Guardian guardian;
-        private int cellNo;
-        private int landLine;
+        private string cellNo;
+        private string landLine;
 
         /// <summary>
         /// Creates a 'Student' derived from 'Person' class.
@@ -111,7 +126,7 @@ namespace CSLabProject
         /// <param name="cellnum">Student cell number.</param>
         /// <param name="landl">Student landline number.</param>
         /// <param name="grdn">Student guarian, uses the 'Guardian' class.</param>
-        public Student(Name name, int age, double wght, Height ht, string gender, int num, string prog, int yr, int cellnum, int landl, Guardian grdn)
+        public Student(Name name, int age, double wght, Height ht, string gender, string num, string prog, int yr, string cellnum, string landl, Guardian grdn)
             : base(name, age, wght, ht, gender)
         {
             studentNumber = num;
@@ -149,7 +164,6 @@ namespace CSLabProject
         {
             base.Weight = val;
         }
-
         public Height GetHeight()
         {
             return base.Height;
@@ -169,7 +183,7 @@ namespace CSLabProject
             base.Gender = val;
         }
 
-        public int StudentNumber
+        public string StudentNumber
         {
             get { return studentNumber; }
             set { studentNumber = value; }
@@ -193,13 +207,13 @@ namespace CSLabProject
             set { guardian = value; }
         }
 
-        public int CellNo
+        public string CellNo
         {
             get { return cellNo; }
             set { cellNo = value; }
         }
 
-        public int LandLine
+        public string LandLine
         {
             get { return landLine; }
             set { landLine = value; }
@@ -296,8 +310,8 @@ namespace CSLabProject
     public class Guardian
     {
         private Name name;
-        private int cellNo;
-        private int landLine;
+        private string cellNo;
+        private string landLine;
 
         /// <summary>
         /// Creates a 'Guardian' object
@@ -305,7 +319,7 @@ namespace CSLabProject
         /// <param name="nm">Name of Guardian, uses 'Name' struct.</param>
         /// <param name="cell">Cellular number.</param>
         /// <param name="line">Landline number.</param>
-        public Guardian(Name nm, int cell, int line)
+        public Guardian(Name nm, string cell, string line)
         {
             name = nm;
             cellNo = cell;
@@ -318,13 +332,13 @@ namespace CSLabProject
             set { name = value; }
         }
 
-        public int CellNo
+        public string CellNo
         {
             get { return CellNo; }
             set { cellNo = value; }
         }
 
-        public int LandLine
+        public string LandLine
         {
             get { return landLine; }
             set { landLine = value; }

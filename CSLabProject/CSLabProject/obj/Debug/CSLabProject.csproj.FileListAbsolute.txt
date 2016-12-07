@@ -62,3 +62,5 @@ C:\Users\Tricia\Desktop\Mepue\clinic-system\CSLabProject\CSLabProject\obj\Debug\
 C:\Users\Tricia\Desktop\Mepue\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.csproj.GenerateResource.Cache
 C:\Users\Tricia\Desktop\Mepue\clinic-system\CSLabProject\CSLabProject\bin\Debug\CSLabProject.exe
 C:\Users\Tricia\Desktop\Mepue\clinic-system\CSLabProject\CSLabProject\bin\Debug\CSLabProject.pdb
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.UserRegistration.resources
+E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.Diagnosis.resources

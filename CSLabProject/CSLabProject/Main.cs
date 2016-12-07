@@ -53,9 +53,10 @@ namespace CSLabProject
             //m.MdiParent = this;
             //m.Show();
 
-            //frmReportForm myReport = new frmReportForm();
-            //myReport.MdiParent = this;
-            //myReport.Show();
+            frmReportForm myReport = new frmReportForm();
+            myReport.MdiParent = this;
+            myReport.Show();
+
         }
 
         private void windowsToolStripMenuItem_Click(object sender, EventArgs e)
