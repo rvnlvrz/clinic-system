@@ -27,12 +27,14 @@ namespace CSLabProject
             string direc = AppDomain.CurrentDomain.BaseDirectory;
             string directory = direc.Replace(@"\bin\Debug\", "");
             globals.currentDirectory = directory + @"\Raw Program Data\";
+            globals.currentDirectoryCopy = directory + @"\Inventory Data\";
             STUD_radioButtonMale.Select();
         }
 
         public class globals
         {
             public static string currentDirectory = ""; /*Helps the program identify where to store obtained data.*/
+            public static string currentDirectoryCopy = ""; /*Helps the program identify where to store obtained data.*/
             public static int flag = 0;
             public static bool formElement1 = false;
             public static bool formElement2 = false;
