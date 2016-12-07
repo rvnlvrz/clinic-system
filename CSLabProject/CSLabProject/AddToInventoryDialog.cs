@@ -21,9 +21,10 @@ namespace CSLabProject
         private void AddToInventoryDialog_Load(object sender, EventArgs e)
         {
             currentDate_txtbx.Text = DateTime.Now.ToString("D");
-            AddingAs_txtbx.Text = "Registred fucking user.";
+            AddingAs_txtbx.Text = "Doctor Name";
             Position_txtbx.Text = "Doctor";
             comboBoxMedicineType.SelectedIndex = 0;
+            ControlBox = false;
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)

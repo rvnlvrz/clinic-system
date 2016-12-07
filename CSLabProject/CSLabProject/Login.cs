@@ -40,7 +40,13 @@ namespace CSLabProject
                 {
                     MessageBox.Show("Access granted as [ADMIN]", "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    frmMain mainForm = new frmMain();
+                    //frmMain mainForm = new frmMain();
+                    //GlobalVar.frmCtrSD = 0;
+                    //this.Hide();
+                    //mainForm.ShowDialog();
+                    //this.Show();
+
+                    administratorPanel mainForm = new administratorPanel();
                     GlobalVar.frmCtrSD = 0;
                     this.Hide();
                     mainForm.ShowDialog();

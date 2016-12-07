@@ -93,9 +93,39 @@ namespace CSLabProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_exit_to_app_white_36dp_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_exit_to_app_white_36dp_2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_face_white_36dp_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_face_white_36dp_2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_note_add_black_18dp_1x {
             get {
                 object obj = ResourceManager.GetObject("ic_note_add_black_18dp_1x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_person_pin_white_36dp_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_person_pin_white_36dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +156,16 @@ namespace CSLabProject.Properties {
         internal static System.Drawing.Bitmap ic_search_black_18dp_1x1 {
             get {
                 object obj = ResourceManager.GetObject("ic_search_black_18dp_1x1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_view_list_white_36dp_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_view_list_white_36dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -20,9 +20,11 @@ namespace CSLabProject
             comboBoxRelationship.SelectedIndex = 1;
             string direc = AppDomain.CurrentDomain.BaseDirectory;
             string directory = direc.Replace(@"\bin\Debug\", "");
+            globals.directory = directory;
             globals.currentDirectory = directory + @"\Raw Program Data\";
             STUD_radioButtonMale.Select();
-
+            
+            
             // added for default name
             globals.defName = this.Text;
 
@@ -33,6 +35,8 @@ namespace CSLabProject
         public class globals
         {
             public static string currentDirectory = ""; /*Helps the program identify where to store obtained data.*/
+            public static string currentDirectoryCopy = ""; /*Helps the program identify where to store obtained data.*/
+            public static string directory = string.Empty;
             public static int flag = 0;
             public static bool formElement1 = false;
             public static bool formElement2 = false;
@@ -54,7 +58,8 @@ namespace CSLabProject
         private void STUD_textBoxFirstName_KeyPress(object sender, KeyPressEventArgs e)
         {
             //The user cannot input the characters sepecified below.
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|0-9]"))
+            var regex = new Regex(@"[^a-zA-Z\s\b]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -67,7 +72,8 @@ namespace CSLabProject
         private void STUD_textBoxFLastName_KeyPress(object sender, KeyPressEventArgs e)
         {
             //The user cannot input the characters sepecified below.
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|0-9]"))
+            var regex = new Regex(@"[^a-zA-Z\s\b]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -80,7 +86,8 @@ namespace CSLabProject
         private void STUD_textBoxMI_KeyPress(object sender, KeyPressEventArgs e)
         {
             //The user cannot input the characters sepecified below.
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|0-9]"))
+            var regex = new Regex(@"[^a-zA-Z\s\b]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -97,15 +104,12 @@ namespace CSLabProject
 
         private void STUD_textBoxMobileNum_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|a-zA-Z]"))
+            var regex = new Regex(@"[^0-9\b\s]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (e.KeyChar == 8)
-            {
-                e.Handled = false;
-            }
-            else if (STUD_textBoxMobileNum.Text.Length == 11)
+            else if (STUD_textBoxMobileNum.Text.Length == 11 && e.KeyChar != 8 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -117,15 +121,12 @@ namespace CSLabProject
 
         private void STUD_textBoxLandLine_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|a-zA-Z+[$]"))
+            var regex = new Regex(@"[^0-9\b\s]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (e.KeyChar == 8)
-            {
-                e.Handled = false;
-            }
-            else if (STUD_textBoxLandLine.Text.Length == 7)
+            else if (STUD_textBoxLandLine.Text.Length == 7 && e.KeyChar != 8 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -138,15 +139,12 @@ namespace CSLabProject
 
         private void STUD_textBoxAge_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|a-zA-Z+[$]"))
+            var regex = new Regex(@"[^0-9\b\s]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (e.KeyChar == 8)
-            {
-                e.Handled = false;
-            }
-            else if (STUD_textBoxAge.Text.Length == 2)
+            else if (STUD_textBoxAge.Text.Length == 2 && e.KeyChar != 8 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -158,15 +156,12 @@ namespace CSLabProject
 
         private void STUD_textBoxYrLvl_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|a-zA-Z+[$]"))
+            var regex = new Regex(@"[^0-9\b\s]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (e.KeyChar == 8)
-            {
-                e.Handled = false;
-            }
-            else if (STUD_textBoxYrLvl.Text.Length == 1)
+            else if (STUD_textBoxYrLvl.Text.Length == 1 && e.KeyChar != 8 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -178,15 +173,12 @@ namespace CSLabProject
 
         private void STUD_textBoxStudentNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|a-zA-Z+[$]"))
+            var regex = new Regex(@"[^0-9\b\s]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (e.KeyChar == 8)
-            {
-                e.Handled = false;
-            }
-            else if (STUD_textBoxStudentNumber.Text.Length == 10)
+            else if (STUD_textBoxStudentNumber.Text.Length == 10 && e.KeyChar != 8 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -324,7 +316,8 @@ namespace CSLabProject
         private void GRDN_textBoxFirstName_KeyPress(object sender, KeyPressEventArgs e)
         {
             //The user cannot input the characters sepecified below.
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|0-9]"))
+            var regex = new Regex(@"[^a-zA-Z\s\b]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -337,7 +330,8 @@ namespace CSLabProject
         private void GRDN_textBoxLastName_KeyPress(object sender, KeyPressEventArgs e)
         {
             //The user cannot input the characters sepecified below.
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|0-9]"))
+            var regex = new Regex(@"[^a-zA-Z\s\b]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -349,15 +343,12 @@ namespace CSLabProject
 
         private void GRDN_textBoxMI_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|0-9]"))
+            var regex = new Regex(@"[^a-zA-Z\s\b]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (e.KeyChar == 8)
-            {
-                e.Handled = false;
-            }
-            else if (GRDN_textBoxMI.Text.Length == 1)
+            else if (GRDN_textBoxMI.Text.Length == 1 && e.KeyChar != 8 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -369,15 +360,12 @@ namespace CSLabProject
 
         private void GRDN_textBoxMobileNum_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|a-zA-Z+$]"))
+            var regex = new Regex(@"[^0-9\b\s]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (e.KeyChar == 8)
-            {
-                e.Handled = false;
-            }
-            else if (GRDN_textBoxMobileNum.Text.Length == 11)
+            else if (GRDN_textBoxMobileNum.Text.Length == 11 && e.KeyChar != 8 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -389,15 +377,12 @@ namespace CSLabProject
 
         private void GRDN_textBoxLandLine_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[^?:\\/:*?\""<>|a-zA-Z+$]"))
+            var regex = new Regex(@"[^0-9\b\s]");
+            if (regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-            else if (e.KeyChar == 8)
-            {
-                e.Handled = false;
-            }
-            else if (GRDN_textBoxLandLine.Text.Length == 7)
+            else if (GRDN_textBoxLandLine.Text.Length == 7 && e.KeyChar != 8 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -722,8 +707,14 @@ namespace CSLabProject
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
+            Name studentName = new Name(STUD_textBoxFirstName.Text, STUD_textBoxLastName.Text, STUD_textBoxMI.Text);
+            Name guardianName = new Name(GRDN_textBoxFirstName.Text, GRDN_textBoxLastName.Text, GRDN_textBoxMI.Text);
+            Height studentHeight = new Height(0, 0);
+            Guardian studentGuardian = new Guardian(guardianName, GRDN_textBoxMobileNum.Text, GRDN_textBoxLandLine.Text);
+            Student student = new Student(studentName, int.Parse(STUD_textBoxAge.Text), 0, studentHeight, STUD_radioButtonMale.Text, STUD_textBoxStudentNumber.Text, STUD_textBoxProram.Text,int.Parse(STUD_textBoxYrLvl.Text), STUD_textBoxMobileNum.Text, STUD_textBoxLandLine.Text, studentGuardian);
             bool confirmAllAreValid = validateInput();
             bool confirmNoneAreNull = checkForNullStrings();
+            Name myName = student.GetName();
 
             if (confirmNoneAreNull && confirmAllAreValid)
             {
@@ -731,23 +722,24 @@ namespace CSLabProject
                 GRDN_textBoxMI.Text = GRDN_textBoxMI.Text.ToUpper() + ".";
                 globals.currentDirectory += @"\" + STUD_textBoxStudentNumber.Text + @"\";
                 Directory.CreateDirectory(globals.currentDirectory);
-                File.WriteAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxFirstName.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxLastName.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxMI.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxAge.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxStudentNumber.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxProram.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxYrLvl.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxMobileNum.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + STUD_textBoxLastName.Text + ".txt", STUD_textBoxLandLine.Text + Environment.NewLine);
+                File.WriteAllText(globals.currentDirectory + myName.FLame + ".txt", myName.FName+ Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + myName.FLame + ".txt", myName.FLame + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + myName.FLame + ".txt", myName.MInitial + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + myName.FLame + ".txt", student.Age + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + myName.FLame + ".txt", student.StudentNumber + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + myName.FLame + ".txt", student.Program + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + myName.FLame + ".txt", student.YearLevel + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + myName.FLame + ".txt", student.CellNo + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + myName.FLame + ".txt", student.LandLine + Environment.NewLine);
 
                 File.WriteAllText(globals.currentDirectory + "GuardianData.txt", comboBoxRelationship.SelectedItem + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", GRDN_textBoxFirstName.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", GRDN_textBoxLastName.Text + Environment.NewLine);
-                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", GRDN_textBoxMobileNum.Text + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", studentGuardian.Name.FName + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", studentGuardian.Name.FLame + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", studentGuardian.Name.MInitial + Environment.NewLine);
+                File.AppendAllText(globals.currentDirectory + "GuardianData.txt", studentGuardian.LandLine + Environment.NewLine);
                 File.AppendAllText(globals.currentDirectory + "GuardianData.txt", GRDN_textBoxMobileNum.Text + Environment.NewLine);
 
-                MessageBox.Show("The details for " + STUD_textBoxLastName.Text + " has been added to the system.");
+                MessageBox.Show("The details for " + myName.FLame + " has been added to the system.");
                 Dispose();
             }
             else if (!confirmAllAreValid)
