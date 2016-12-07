@@ -32,6 +32,7 @@
             this.inventoryGrid = new System.Windows.Forms.ListView();
             this.NameHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.QuantityHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.unitHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DateHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.UserAssignmentHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.UserTypeHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -48,10 +49,11 @@
             this.RemoveTT = new System.Windows.Forms.ToolTip(this.components);
             this.EditTT = new System.Windows.Forms.ToolTip(this.components);
             this.SearchTT = new System.Windows.Forms.ToolTip(this.components);
+            this.commenceSearch_btn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_Confirm = new System.Windows.Forms.Button();
             this.BTNclose = new System.Windows.Forms.Button();
-            this.unitHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.searchKey_txtbox = new System.Windows.Forms.TextBox();
             this.grpbxInventoryTools.SuspendLayout();
             this.grpbxUserDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userAvatar)).BeginInit();
@@ -88,6 +90,11 @@
             this.QuantityHeader.Text = "Item Quantity";
             this.QuantityHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.QuantityHeader.Width = 143;
+            // 
+            // unitHeader
+            // 
+            this.unitHeader.Text = "Type";
+            this.unitHeader.Width = 140;
             // 
             // DateHeader
             // 
@@ -129,6 +136,7 @@
             this.BTNdeleteItem.TabIndex = 7;
             this.RemoveTT.SetToolTip(this.BTNdeleteItem, "Remove an existing inventory record.");
             this.BTNdeleteItem.UseVisualStyleBackColor = true;
+            this.BTNdeleteItem.Click += new System.EventHandler(this.BTNdeleteItem_Click);
             // 
             // BTNModifyItem
             // 
@@ -149,6 +157,7 @@
             this.BTNdsearchItem.TabIndex = 5;
             this.SearchTT.SetToolTip(this.BTNdsearchItem, "Search the inventory for an existing record.");
             this.BTNdsearchItem.UseVisualStyleBackColor = true;
+            this.BTNdsearchItem.Click += new System.EventHandler(this.BTNdsearchItem_Click);
             // 
             // BTNcreateNew
             // 
@@ -200,9 +209,32 @@
             this.userAvatar.TabIndex = 7;
             this.userAvatar.TabStop = false;
             // 
+            // CreateTT
+            // 
+            this.CreateTT.IsBalloon = true;
+            // 
+            // RemoveTT
+            // 
+            this.RemoveTT.IsBalloon = true;
+            // 
+            // EditTT
+            // 
+            this.EditTT.IsBalloon = true;
+            // 
             // SearchTT
             // 
             this.SearchTT.IsBalloon = true;
+            // 
+            // commenceSearch_btn
+            // 
+            this.commenceSearch_btn.Image = global::CSLabProject.Properties.Resources.ic_search_black_18dp_1x;
+            this.commenceSearch_btn.Location = new System.Drawing.Point(806, 35);
+            this.commenceSearch_btn.Name = "commenceSearch_btn";
+            this.commenceSearch_btn.Size = new System.Drawing.Size(42, 38);
+            this.commenceSearch_btn.TabIndex = 8;
+            this.SearchTT.SetToolTip(this.commenceSearch_btn, "Search the inventory for an existing record.");
+            this.commenceSearch_btn.UseVisualStyleBackColor = true;
+            this.commenceSearch_btn.Click += new System.EventHandler(this.commenceSearch_btn_Click);
             // 
             // groupBox1
             // 
@@ -236,10 +268,14 @@
             this.BTNclose.UseVisualStyleBackColor = false;
             this.BTNclose.Click += new System.EventHandler(this.BTNclose_Click);
             // 
-            // unitHeader
+            // searchKey_txtbox
             // 
-            this.unitHeader.Text = "Type";
-            this.unitHeader.Width = 140;
+            this.searchKey_txtbox.Location = new System.Drawing.Point(478, 42);
+            this.searchKey_txtbox.Name = "searchKey_txtbox";
+            this.searchKey_txtbox.Size = new System.Drawing.Size(322, 26);
+            this.searchKey_txtbox.TabIndex = 9;
+            this.searchKey_txtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchKey_txtbox_KeyPress);
+            this.searchKey_txtbox.Leave += new System.EventHandler(this.searchKey_txtbox_Leave);
             // 
             // Inventory
             // 
@@ -247,6 +283,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1276, 608);
+            this.Controls.Add(this.commenceSearch_btn);
+            this.Controls.Add(this.searchKey_txtbox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpbxUserDetails);
             this.Controls.Add(this.grpbxInventoryTools);
@@ -262,6 +300,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.userAvatar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -289,5 +328,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_Confirm;
         private System.Windows.Forms.ColumnHeader unitHeader;
+        private System.Windows.Forms.TextBox searchKey_txtbox;
+        private System.Windows.Forms.Button commenceSearch_btn;
     }
 }
