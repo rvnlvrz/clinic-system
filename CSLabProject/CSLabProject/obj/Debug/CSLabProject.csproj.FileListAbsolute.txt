@@ -31,7 +31,6 @@ C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\bin\De
 C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.exe
 C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.pdb
 C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.csprojResolveAssemblyReference.cache
-C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.Inventory.resources
 C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.Properties.Resources.resources
 C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.csproj.GenerateResource.Cache
 C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\bin\Debug\CSLabProject.exe
@@ -47,3 +46,4 @@ C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\obj\De
 C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.frmReportForm.resources
 C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.frmStudentDetails.resources
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.frmInventory.resources
+C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.frmInventory.resources

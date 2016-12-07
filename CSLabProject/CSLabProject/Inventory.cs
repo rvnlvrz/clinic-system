@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace CSLabProject
 {
@@ -30,6 +31,8 @@ namespace CSLabProject
             public static bool itemIsPresent = false;
             public static string searchKey = string.Empty;
             public static int flag = 0;
+            public static string[] listViewItems = new string[] { };
+            public static int counter = 0;
         }
         private void Inventory_Load(object sender, EventArgs e)
         {
@@ -45,6 +48,9 @@ namespace CSLabProject
             string[] dataElements = new string[] { globals.itemQuantity, globals.medType, globals.currentDate, globals.addedAs, globals.position };
             if (globals.flag == 1)
             {
+                Directory.CreateDirectory(frmStudentDetails.globals.currentDirectoryCopy);
+                File.AppendAllText(frmStudentDetails.globals.currentDirectoryCopy + "ItemNames.txt", globals.itemName + Environment.NewLine);
+                File.AppendAllLines(frmStudentDetails.globals.currentDirectoryCopy + "SubItems.txt", dataElements);
                 inventoryGrid.Items.Add(globals.itemName).SubItems.AddRange(dataElements);
             }
         }
@@ -62,10 +68,6 @@ namespace CSLabProject
             searchKey_txtbox.Select();
         }
 
-
-
-
-
         private void BTNdeleteItem_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < inventoryGrid.Items.Count; i++)
@@ -77,8 +79,6 @@ namespace CSLabProject
                 }
             }
         }
-
-
 
         private void commenceSearch_btn_Click(object sender, EventArgs e)
         {
