@@ -6,12 +6,25 @@ namespace CSLabProject
         string fName;
         string lName;
         string mInitial;
+
+        public Name(string f, string l, string init)
+        {
+            fName = f;
+            lName = l;
+            mInitial = init;
+        }
     }
 
     public struct Height
     {
         int feet;
         int inches;
+
+        public Height(int ft, int inchy)
+        {
+            feet = ft;
+            inches = inchy;
+        }
     }
 
     /// <summary>
@@ -39,6 +52,36 @@ namespace CSLabProject
         public Person(Name uName, int uAge, double uWeight, Height uHt, string uGend)
         {
             name = uName; age = uAge; weight = uWeight; height = uHt; gender = uGend;
+        }
+
+        public Name Name
+        {
+            get { return name; }
+            set { Name = value; }
+        }
+
+        public int Age
+        {
+            get { return age; }
+            set { age = value; }
+        }
+
+        public double Weight
+        {
+            get { return weight; }
+            set { weight = value; }
+        }
+
+        public Height Height
+        {
+            get { return height; }
+            set { height = value; }
+        }
+
+        public string Gender
+        {
+            get { return gender; }
+            set { gender = value; }
         }
     }
 
@@ -76,6 +119,91 @@ namespace CSLabProject
             yearLevel = yr;
             guardian = grdn;
         }
+
+        public Name GetName()
+        {
+            return base.Name;
+        }
+
+        public void SetName(Name val)
+        {
+            base.Name = val;
+        }
+
+        public int GetAge()
+        {
+            return base.Age;
+        }
+
+        public void SetAge(int val)
+        {
+            base.Age = val;
+        }
+
+        public double GetWeight()
+        {
+            return base.Weight;
+        }
+
+        public void SetWeight(double val)
+        {
+            base.Weight = val;
+        }
+
+        public Height GetHeight()
+        {
+            return base.Height;
+        }
+        public void SetHeight(Height val)
+        {
+            base.Height = val;
+        }
+
+        public string GetGender()
+        {
+            return base.Gender;
+        }
+
+        public void SetGender(string val)
+        {
+            base.Gender = val;
+        }
+
+        public int StudentNumber
+        {
+            get { return studentNumber; }
+            set { studentNumber = value; }
+        }
+
+        public string Program
+        {
+            get { return program; }
+            set { program = value; }
+        }
+
+        public int YearLevel
+        {
+            get { return yearLevel; }
+            set { YearLevel = value; }
+        }
+
+        public Guardian Guardian
+        {
+            get { return guardian; }
+            set { guardian = value; }
+        }
+
+        public int CellNo
+        {
+            get { return cellNo; }
+            set { cellNo = value; }
+        }
+
+        public int LandLine
+        {
+            get { return landLine; }
+            set { landLine = value; }
+        }
     }
 
     /// <summary>
@@ -102,6 +230,67 @@ namespace CSLabProject
             employeeNumber = num;
             position = pos;
         }
+
+        public Name GetName()
+        {
+            return base.Name;
+        }
+
+        public void SetName(Name val)
+        {
+            base.Name = val;
+        }
+
+        public int GetAge()
+        {
+            return base.Age;
+        }
+
+        public void SetAge(int val)
+        {
+            base.Age = val;
+        }
+
+        public double GetWeight()
+        {
+            return base.Weight;
+        }
+
+        public void SetWeight(double val)
+        {
+            base.Weight = val;
+        }
+
+        public Height GetHeight()
+        {
+            return base.Height;
+        }
+        public void SetHeight(Height val)
+        {
+            base.Height = val;
+        }
+
+        public string GetGender()
+        {
+            return base.Gender;
+        }
+
+        public void SetGender(string val)
+        {
+            base.Gender = val;
+        }
+
+        public int EmployeeNumber
+        {
+            get { return employeeNumber; }
+            set { employeeNumber = value; }
+        }
+
+        public string Position
+        {
+            get { return position; }
+            set { position = value; }
+        }
     }
 
     public class Guardian
@@ -121,6 +310,24 @@ namespace CSLabProject
             name = nm;
             cellNo = cell;
             landLine = line;
+        }
+
+        public Name Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public int CellNo
+        {
+            get { return CellNo; }
+            set { cellNo = value; }
+        }
+
+        public int LandLine
+        {
+            get { return landLine; }
+            set { landLine = value; }
         }
     }
 }
