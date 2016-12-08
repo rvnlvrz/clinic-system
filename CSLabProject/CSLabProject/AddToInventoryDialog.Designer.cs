@@ -216,13 +216,11 @@
             this.comboBoxMedicineType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMedicineType.FormattingEnabled = true;
             this.comboBoxMedicineType.Items.AddRange(new object[] {
-            "Fuck",
-            "This",
-            "Shit",
-            "Screw",
-            "Your",
-            "Whole",
-            "Family"});
+            "Antipyretics",
+            "Analgesics",
+            "Antibiotics",
+            "Antiseptics",
+            "Mood stabilizers"});
             this.comboBoxMedicineType.Location = new System.Drawing.Point(173, 91);
             this.comboBoxMedicineType.Name = "comboBoxMedicineType";
             this.comboBoxMedicineType.Size = new System.Drawing.Size(121, 28);
