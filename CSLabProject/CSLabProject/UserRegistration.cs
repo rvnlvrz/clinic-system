@@ -31,14 +31,6 @@ namespace CSLabProject
 
         private void lblFname_Click(object sender, EventArgs e)
         {
-            if (lblFname.Text != string.Empty)
-            {
-                fnametxtBox.BackColor = Color.Black;
-            }
-            else if (lblFname.Text == string.Empty)
-            {
-                fnametxtBox.BackColor = Color.Red;
-            }
 
         }
 
@@ -111,19 +103,25 @@ namespace CSLabProject
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            if (string.Compare(tbxPass.Text, tbxConfirm.Text) != 0)
+            bool confirmNoneAreNull = checkForNullStrings();
+            if (confirmNoneAreNull)
             {
-                MessageBox.Show("Paswords don't match.");
-                tbxPass.Focus();
-                
-            }
-            else
-            {
-                string hash = Encrypt.EncryptString(tbxUser.Text, tbxPass.Text);
-                File.AppendAllText("accts.txt", hash + Environment.NewLine);
+                if (string.Compare(tbxPass.Text, tbxConfirm.Text) != 0)
+                {
+                    MessageBox.Show("Paswords don't match.");
+                    tbxPass.Focus();
 
-                MessageBox.Show("The account of " + lblLname.Text + " has been added to the system.");
-                Dispose();
+                }
+                else
+                {
+                    string hash = Encrypt.EncryptString(tbxUser.Text, tbxPass.Text);
+                    File.AppendAllText("accts.txt", hash + Environment.NewLine);
+                    MessageBox.Show("The account of " + tbxUser.Text + " has been added to the system.");
+                }
+            }
+            else if(!confirmNoneAreNull)
+            {
+                MessageBox.Show("You cannot leave an empty field.");
             }
         }
 
@@ -159,6 +157,20 @@ namespace CSLabProject
             else if (myBox.Text != string.Empty)
             {
                 myBox.ForeColor = Color.Black;
+            }
+        }
+
+        public bool checkForNullStrings()
+        {
+            if(fnametxtBox.Text != string.Empty && lastnametxtBox.Text != string.Empty
+                && middlenametxtBox.Text != string.Empty && tbxUser.Text != string.Empty
+                && tbxPass.Text != string.Empty && tbxConfirm.Text != string.Empty)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

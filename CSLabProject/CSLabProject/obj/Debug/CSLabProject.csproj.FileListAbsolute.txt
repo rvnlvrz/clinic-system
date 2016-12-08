@@ -54,3 +54,4 @@ E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.a
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.EmployeeDetails.resources
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.nursePanel.resources
 E:\Mapua\CS128L\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.frmAddUser.resources
+C:\Users\rdels_000.VAIO\Documents\clinic-system\CSLabProject\CSLabProject\obj\Debug\CSLabProject.frmAddUser.resources
