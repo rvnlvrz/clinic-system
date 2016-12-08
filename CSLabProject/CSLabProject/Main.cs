@@ -20,7 +20,7 @@ namespace CSLabProject
         private void Main_Load(object sender, EventArgs e)
         {
             MdiClient ctlMDI;
-                       
+
             // Loop through all of the form's controls looking
             // for the control of type MdiClient.
             foreach (Control ctl in this.Controls)
@@ -42,7 +42,7 @@ namespace CSLabProject
             }
 
             // display intial forms
-            
+
             // disable form controls
             if (GlobalVar.accessUser != "admin")
             {
@@ -57,7 +57,7 @@ namespace CSLabProject
                 myAdmin.Show();
             }
 
-            
+
         }
 
         private void windowsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -145,8 +145,7 @@ namespace CSLabProject
 
         private void frmMain_SizeChanged(object sender, EventArgs e)
         {
-            this.Refresh();
-            this.Invalidate();
+
         }
     }
 

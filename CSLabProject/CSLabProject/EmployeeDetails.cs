@@ -12,9 +12,9 @@ using System.Text.RegularExpressions;
 
 namespace CSLabProject
 {
-    public partial class EmployeeDetails : Form
+    public partial class frmEmployee : Form
     {
-        public EmployeeDetails()
+        public frmEmployee()
         {
             InitializeComponent();
         }
@@ -143,8 +143,8 @@ namespace CSLabProject
         {
             EMP_radioButtonMale.Select();
             EMP_textBoxFirstName.Select();
-            globals.currentDirectory += @"\" + EMP_textBoxEmployeeNumber.Text + @"\";
-            Directory.CreateDirectory(globals.currentDirectory);
+            //globals.currentDirectory += @"\" + EMP_textBoxEmployeeNumber.Text + @"\";
+            //Directory.CreateDirectory(globals.currentDirectory);
         }
 
         private void EMP_textBoxFirstName_Leave(object sender, EventArgs e)
@@ -437,6 +437,11 @@ namespace CSLabProject
                 warning_label.Text = warning_label.Text = "An inputted value appears to be invalid.";
             }
 
+        }
+
+        private void buttonCNCL_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

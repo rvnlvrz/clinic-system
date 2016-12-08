@@ -31,16 +31,14 @@ namespace CSLabProject
         private void btn_administration_Click(object sender, EventArgs e)
         {
             frmAddUser myAddForm = new frmAddUser();
-
-            myAddForm.ShowDialog();
+            myAddForm.Show();
 
         }
 
         private void btn_student_Click(object sender, EventArgs e)
         {
             frmStudentDetails studentDetailsForm = new frmStudentDetails();
-
-            studentDetailsForm.ShowDialog();
+            studentDetailsForm.Show();
 
         }
 
@@ -82,6 +80,18 @@ namespace CSLabProject
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_employee_Click(object sender, EventArgs e)
+        {
+            frmEmployee myEmp = new frmEmployee();
+            myEmp.Show();
+
+        }
+
+        private void frmAdmin_ResizeEnd(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
         }
     }
 }
