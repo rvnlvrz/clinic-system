@@ -52,6 +52,8 @@
         private double weight;
         private Height height;
         private string gender;
+        private int systole, diastole; //for blood pressure
+
 
         public Person()
         { }
@@ -97,6 +99,18 @@
         {
             get { return gender; }
             set { gender = value; }
+        }
+
+        public int Systole
+        {
+            get { return systole; }
+            set { systole = value; }
+        }
+
+        public int Diastole
+        {
+            get { return diastole; }
+            set { diastole = value; }
         }
     }
 
@@ -217,6 +231,26 @@
         {
             get { return landLine; }
             set { landLine = value; }
+        }
+
+        public int GetDiastole()
+        {
+            return base.Diastole;
+        }
+
+        public void SetDiastole(int val)
+        {
+            base.Diastole = val;
+        }
+
+        public int GetSystole()
+        {
+            return base.Systole;
+        }
+
+        public void SetSystole(int val)
+        {
+            base.Systole = val;
         }
     }
 

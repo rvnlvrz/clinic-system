@@ -42,7 +42,7 @@ namespace CSLabProject
 
                     GlobalVar.accessUser = tbxUser.Text;
 
-                    administratorPanel mainForm = new administratorPanel();
+                    frmMain mainForm = new frmMain();
                     GlobalVar.frmCtrSD = 0;
                     this.Hide();
                     mainForm.ShowDialog();
@@ -53,6 +53,7 @@ namespace CSLabProject
                         if (ctrl is TextBox)
                             ctrl.ResetText();
                     }
+                    tbxUser.Focus();
                     return;
                 }
                 if (string.Compare(userCipher, definedCipher[x]) == 0)
@@ -72,6 +73,7 @@ namespace CSLabProject
                         if (ctrl is TextBox)
                             ctrl.ResetText();
                     }
+                    tbxUser.Focus();
                     return;
                 }
             }

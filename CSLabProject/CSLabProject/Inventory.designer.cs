@@ -41,8 +41,7 @@
             this.BTNModifyItem = new System.Windows.Forms.Button();
             this.BTNdsearchItem = new System.Windows.Forms.Button();
             this.BTNcreateNew = new System.Windows.Forms.Button();
-            this.UserName = new System.Windows.Forms.Label();
-            this.userPosition = new System.Windows.Forms.Label();
+            this.lblUsrName = new System.Windows.Forms.Label();
             this.grpbxUserDetails = new System.Windows.Forms.GroupBox();
             this.userAvatar = new System.Windows.Forms.PictureBox();
             this.CreateTT = new System.Windows.Forms.ToolTip(this.components);
@@ -85,7 +84,6 @@
             // QuantityHeader
             // 
             this.QuantityHeader.Text = "Item Quantity";
-            this.QuantityHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.QuantityHeader.Width = 143;
             // 
             // unitHeader
@@ -96,19 +94,16 @@
             // DateHeader
             // 
             this.DateHeader.Text = "Date Added";
-            this.DateHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.DateHeader.Width = 344;
             // 
             // UserAssignmentHeader
             // 
             this.UserAssignmentHeader.Text = "Added By";
-            this.UserAssignmentHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.UserAssignmentHeader.Width = 191;
             // 
             // UserTypeHeader
             // 
             this.UserTypeHeader.Text = "Position";
-            this.UserTypeHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.UserTypeHeader.Width = 142;
             // 
             // grpbxInventoryTools
@@ -126,6 +121,8 @@
             // 
             // BTNdeleteItem
             // 
+            this.BTNdeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNdeleteItem.ForeColor = System.Drawing.Color.Black;
             this.BTNdeleteItem.Image = global::CSLabProject.Properties.Resources.ic_remove_circle_outline_black_18dp_1x;
             this.BTNdeleteItem.Location = new System.Drawing.Point(61, 25);
             this.BTNdeleteItem.Name = "BTNdeleteItem";
@@ -137,6 +134,8 @@
             // 
             // BTNModifyItem
             // 
+            this.BTNModifyItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNModifyItem.ForeColor = System.Drawing.Color.Black;
             this.BTNModifyItem.Image = global::CSLabProject.Properties.Resources.ic_create_black_18dp_1x;
             this.BTNModifyItem.Location = new System.Drawing.Point(107, 25);
             this.BTNModifyItem.Name = "BTNModifyItem";
@@ -147,6 +146,8 @@
             // 
             // BTNdsearchItem
             // 
+            this.BTNdsearchItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNdsearchItem.ForeColor = System.Drawing.Color.Black;
             this.BTNdsearchItem.Image = global::CSLabProject.Properties.Resources.ic_search_black_18dp_1x;
             this.BTNdsearchItem.Location = new System.Drawing.Point(153, 25);
             this.BTNdsearchItem.Name = "BTNdsearchItem";
@@ -158,6 +159,8 @@
             // 
             // BTNcreateNew
             // 
+            this.BTNcreateNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNcreateNew.ForeColor = System.Drawing.Color.Black;
             this.BTNcreateNew.Image = global::CSLabProject.Properties.Resources.ic_note_add_black_18dp_1x;
             this.BTNcreateNew.Location = new System.Drawing.Point(16, 25);
             this.BTNcreateNew.Name = "BTNcreateNew";
@@ -167,28 +170,18 @@
             this.BTNcreateNew.UseVisualStyleBackColor = true;
             this.BTNcreateNew.Click += new System.EventHandler(this.BTNcreateNew_Click);
             // 
-            // UserName
+            // lblUsrName
             // 
-            this.UserName.AutoSize = true;
-            this.UserName.Location = new System.Drawing.Point(10, 26);
-            this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(206, 21);
-            this.UserName.TabIndex = 8;
-            this.UserName.Text = "This is where the name goes";
-            // 
-            // userPosition
-            // 
-            this.userPosition.AutoSize = true;
-            this.userPosition.Location = new System.Drawing.Point(12, 49);
-            this.userPosition.Name = "userPosition";
-            this.userPosition.Size = new System.Drawing.Size(105, 21);
-            this.userPosition.TabIndex = 9;
-            this.userPosition.Text = "Nurse/Doctor";
+            this.lblUsrName.AutoSize = true;
+            this.lblUsrName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsrName.Location = new System.Drawing.Point(10, 26);
+            this.lblUsrName.Name = "lblUsrName";
+            this.lblUsrName.Size = new System.Drawing.Size(0, 32);
+            this.lblUsrName.TabIndex = 8;
             // 
             // grpbxUserDetails
             // 
-            this.grpbxUserDetails.Controls.Add(this.userPosition);
-            this.grpbxUserDetails.Controls.Add(this.UserName);
+            this.grpbxUserDetails.Controls.Add(this.lblUsrName);
             this.grpbxUserDetails.Controls.Add(this.userAvatar);
             this.grpbxUserDetails.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbxUserDetails.Location = new System.Drawing.Point(968, 12);
@@ -249,7 +242,7 @@
             // 
             this.searchKey_txtbox.Location = new System.Drawing.Point(447, 42);
             this.searchKey_txtbox.Name = "searchKey_txtbox";
-            this.searchKey_txtbox.Size = new System.Drawing.Size(322, 26);
+            this.searchKey_txtbox.Size = new System.Drawing.Size(322, 20);
             this.searchKey_txtbox.TabIndex = 9;
             this.searchKey_txtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchKey_txtbox_KeyPress);
             this.searchKey_txtbox.Leave += new System.EventHandler(this.searchKey_txtbox_Leave);
@@ -294,8 +287,7 @@
         private System.Windows.Forms.Button BTNModifyItem;
         private System.Windows.Forms.Button BTNdeleteItem;
         private System.Windows.Forms.PictureBox userAvatar;
-        private System.Windows.Forms.Label UserName;
-        private System.Windows.Forms.Label userPosition;
+        private System.Windows.Forms.Label lblUsrName;
         private System.Windows.Forms.GroupBox grpbxUserDetails;
         private System.Windows.Forms.ToolTip CreateTT;
         private System.Windows.Forms.ToolTip RemoveTT;

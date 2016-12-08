@@ -97,7 +97,7 @@ namespace CSLabProject
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-
+            
             bool allAreFilled = checkIfAllAreFilled();
             if (!allAreFilled)
             {
@@ -109,11 +109,6 @@ namespace CSLabProject
                 warnLabel.Text = string.Empty;
                 Dispose();
             }
-
-
-
-
-
         }
 
         private void ItemName_txtbx_KeyPress(object sender, KeyPressEventArgs e)

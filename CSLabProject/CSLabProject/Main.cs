@@ -42,21 +42,22 @@ namespace CSLabProject
             }
 
             // display intial forms
+            
+            // disable form controls
+            if (GlobalVar.accessUser != "admin")
+            {
+                menuVAdminPnl.Enabled = false;
+            }
 
-            //frmStudentDetails m = new frmStudentDetails();
-            //m.MdiParent = this;
-            //GlobalVar.frmCtrSD++;
-            //m.Text += " " + GlobalVar.frmCtrSD.ToString();
-            //m.Show();
 
-            //frmStudentDetails m = new frmStudentDetails();
-            //m.MdiParent = this;
-            //m.Show();
+            if (GlobalVar.accessUser == "admin")
+            {
+                frmAdmin myAdmin = new frmAdmin();
+                myAdmin.MdiParent = this;
+                myAdmin.Show();
+            }
 
-            frmReportForm myReport = new frmReportForm();
-            myReport.MdiParent = this;
-            myReport.Show();
-
+            
         }
 
         private void windowsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -140,6 +141,12 @@ namespace CSLabProject
             frmReportForm repForm = new frmReportForm();
             repForm.MdiParent = this;
             repForm.Show();
+        }
+
+        private void frmMain_SizeChanged(object sender, EventArgs e)
+        {
+            this.Refresh();
+            this.Invalidate();
         }
     }
 

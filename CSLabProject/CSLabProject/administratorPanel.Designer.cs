@@ -1,6 +1,6 @@
 ﻿namespace CSLabProject
 {
-    partial class administratorPanel
+    partial class frmAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(administratorPanel));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
             this.lbl_std = new System.Windows.Forms.Label();
             this.lbl_dB = new System.Windows.Forms.Label();
             this.lbl_admin = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.lbl_std.BackColor = System.Drawing.Color.Transparent;
             this.lbl_std.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_std.ForeColor = System.Drawing.Color.White;
-            this.lbl_std.Location = new System.Drawing.Point(442, 160);
+            this.lbl_std.Location = new System.Drawing.Point(421, 184);
             this.lbl_std.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_std.Name = "lbl_std";
             this.lbl_std.Size = new System.Drawing.Size(63, 21);
@@ -69,7 +69,7 @@
             this.lbl_dB.BackColor = System.Drawing.Color.Transparent;
             this.lbl_dB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_dB.ForeColor = System.Drawing.Color.White;
-            this.lbl_dB.Location = new System.Drawing.Point(271, 160);
+            this.lbl_dB.Location = new System.Drawing.Point(249, 184);
             this.lbl_dB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_dB.Name = "lbl_dB";
             this.lbl_dB.Size = new System.Drawing.Size(74, 21);
@@ -80,9 +80,10 @@
             // 
             this.lbl_admin.AutoSize = true;
             this.lbl_admin.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_admin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_admin.ForeColor = System.Drawing.Color.White;
-            this.lbl_admin.Location = new System.Drawing.Point(77, 161);
+            this.lbl_admin.Location = new System.Drawing.Point(70, 184);
             this.lbl_admin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_admin.Name = "lbl_admin";
             this.lbl_admin.Size = new System.Drawing.Size(113, 21);
@@ -95,7 +96,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(78, 183);
+            this.label4.Location = new System.Drawing.Point(65, 206);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 12);
@@ -108,7 +109,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(87, 193);
+            this.label5.Location = new System.Drawing.Point(76, 216);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 12);
@@ -121,7 +122,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(273, 194);
+            this.label6.Location = new System.Drawing.Point(252, 216);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 12);
@@ -134,7 +135,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(248, 183);
+            this.label7.Location = new System.Drawing.Point(219, 205);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 12);
@@ -147,7 +148,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(453, 193);
+            this.label8.Location = new System.Drawing.Point(419, 217);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 12);
@@ -160,7 +161,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(419, 183);
+            this.label9.Location = new System.Drawing.Point(387, 207);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(126, 12);
@@ -172,7 +173,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(243, 27);
+            this.label10.Location = new System.Drawing.Point(243, 16);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(248, 47);
@@ -208,8 +209,8 @@
             this.btn_student.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btn_student.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_student.Image = global::CSLabProject.Properties.Resources.ic_face_white_36dp_2x;
-            this.btn_student.Location = new System.Drawing.Point(415, 85);
-            this.btn_student.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_student.Location = new System.Drawing.Point(394, 85);
+            this.btn_student.Margin = new System.Windows.Forms.Padding(2);
             this.btn_student.Name = "btn_student";
             this.btn_student.Size = new System.Drawing.Size(113, 96);
             this.btn_student.TabIndex = 2;
@@ -221,25 +222,26 @@
             this.btn_database.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btn_database.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_database.Image = global::CSLabProject.Properties.Resources.ic_view_list_white_36dp_2x;
-            this.btn_database.Location = new System.Drawing.Point(249, 86);
-            this.btn_database.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_database.Location = new System.Drawing.Point(228, 86);
+            this.btn_database.Margin = new System.Windows.Forms.Padding(2);
             this.btn_database.Name = "btn_database";
-            this.btn_database.Size = new System.Drawing.Size(113, 96);
+            this.btn_database.Size = new System.Drawing.Size(113, 98);
             this.btn_database.TabIndex = 1;
             this.btn_database.UseVisualStyleBackColor = true;
             this.btn_database.Click += new System.EventHandler(this.btn_database_Click);
             // 
             // btn_administration
             // 
+            this.btn_administration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btn_administration.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btn_administration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_administration.Image = global::CSLabProject.Properties.Resources.ic_person_pin_white_36dp_2x;
-            this.btn_administration.Location = new System.Drawing.Point(75, 86);
-            this.btn_administration.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_administration.Location = new System.Drawing.Point(71, 86);
+            this.btn_administration.Margin = new System.Windows.Forms.Padding(2);
             this.btn_administration.Name = "btn_administration";
             this.btn_administration.Size = new System.Drawing.Size(113, 96);
             this.btn_administration.TabIndex = 0;
-            this.btn_administration.UseVisualStyleBackColor = true;
+            this.btn_administration.UseVisualStyleBackColor = false;
             this.btn_administration.Click += new System.EventHandler(this.btn_administration_Click);
             // 
             // label1
@@ -248,12 +250,13 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(589, 193);
+            this.label1.Location = new System.Drawing.Point(584, 217);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 12);
             this.label1.TabIndex = 37;
             this.label1.Text = "exit the system.";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -261,12 +264,13 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(596, 183);
+            this.label2.Location = new System.Drawing.Point(591, 207);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 12);
             this.label2.TabIndex = 36;
             this.label2.Text = "Log off and";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -274,32 +278,33 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(592, 160);
+            this.label3.Location = new System.Drawing.Point(587, 184);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 21);
             this.label3.TabIndex = 35;
             this.label3.Text = "Logout";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btn_logout
             // 
             this.btn_logout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_logout.Image = global::CSLabProject.Properties.Resources.ic_exit_to_app_white_36dp_2x;
-            this.btn_logout.Location = new System.Drawing.Point(565, 85);
-            this.btn_logout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_logout.Location = new System.Drawing.Point(560, 85);
+            this.btn_logout.Margin = new System.Windows.Forms.Padding(2);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(113, 96);
             this.btn_logout.TabIndex = 34;
             this.btn_logout.UseVisualStyleBackColor = true;
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
-            // administratorPanel
+            // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(724, 231);
+            this.ClientSize = new System.Drawing.Size(740, 284);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -319,10 +324,14 @@
             this.Controls.Add(this.btn_student);
             this.Controls.Add(this.btn_database);
             this.Controls.Add(this.btn_administration);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "administratorPanel";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(740, 284);
+            this.MinimumSize = new System.Drawing.Size(740, 284);
+            this.Name = "frmAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administration";
             this.Load += new System.EventHandler(this.administratorPanel_Load);
             this.ResumeLayout(false);

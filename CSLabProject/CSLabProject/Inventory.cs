@@ -40,12 +40,12 @@ namespace CSLabProject
             {
                 dir.Delete(true);
             }
-            if (!dir.Exists)
-            {
-                BTNdsearchItem.Enabled = false;
-            }
+            BTNdsearchItem.Enabled = false;
+
             File.Delete(frmStudentDetails.globals.currentDirectoryCopy);
-            
+
+            lblUsrName.Text = GlobalVar.accessUser;
+
         }
 
         private void BTNcreateNew_Click(object sender, EventArgs e)
@@ -62,6 +62,7 @@ namespace CSLabProject
                 File.AppendAllText(frmStudentDetails.globals.currentDirectoryCopy + globals.itemName + ".txt", globals.itemName + Environment.NewLine);
                 File.AppendAllLines(frmStudentDetails.globals.currentDirectoryCopy + globals.itemName + "Sub.txt", dataElements);
                 inventoryGrid.Items.Add(globals.itemName).SubItems.AddRange(dataElements);
+                BTNdsearchItem.Enabled = true;  
             }
         }
 

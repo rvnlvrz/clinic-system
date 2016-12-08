@@ -45,6 +45,8 @@
             this.menuVReport = new System.Windows.Forms.ToolStripMenuItem();
             this.menuVDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.menuVInventory = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuVAdminPnl = new System.Windows.Forms.ToolStripMenuItem();
+            this.nursePanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.menuWCascade = new System.Windows.Forms.ToolStripMenuItem();
             this.menuWTileH = new System.Windows.Forms.ToolStripMenuItem();
@@ -158,7 +160,9 @@
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuVReport,
             this.menuVDetails,
-            this.menuVInventory});
+            this.menuVInventory,
+            this.menuVAdminPnl,
+            this.nursePanelToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "&View";
@@ -183,6 +187,18 @@
             this.menuVInventory.Size = new System.Drawing.Size(153, 22);
             this.menuVInventory.Text = "Inv&entory";
             this.menuVInventory.Click += new System.EventHandler(this.menuVInventory_Click);
+            // 
+            // menuVAdminPnl
+            // 
+            this.menuVAdminPnl.Name = "menuVAdminPnl";
+            this.menuVAdminPnl.Size = new System.Drawing.Size(153, 22);
+            this.menuVAdminPnl.Text = "Admin Panel";
+            // 
+            // nursePanelToolStripMenuItem
+            // 
+            this.nursePanelToolStripMenuItem.Name = "nursePanelToolStripMenuItem";
+            this.nursePanelToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.nursePanelToolStripMenuItem.Text = "Nurse Panel";
             // 
             // menuWindow
             // 
@@ -228,6 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(699, 327);
@@ -240,6 +257,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             this.Load += new System.EventHandler(this.Main_Load);
+            this.SizeChanged += new System.EventHandler(this.frmMain_SizeChanged);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -269,5 +287,7 @@
         private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuVAdminPnl;
+        private System.Windows.Forms.ToolStripMenuItem nursePanelToolStripMenuItem;
     }
 }

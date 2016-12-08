@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddUser));
             this.titlelbl = new System.Windows.Forms.Label();
             this.fnametxtBox = new System.Windows.Forms.TextBox();
             this.lastnametxtBox = new System.Windows.Forms.TextBox();
@@ -237,6 +238,8 @@
             this.Controls.Add(this.fnametxtBox);
             this.Controls.Add(this.titlelbl);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAddUser";
             this.Text = "Add User";
             this.Load += new System.EventHandler(this.UserRegistration_Load);
